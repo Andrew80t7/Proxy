@@ -80,7 +80,7 @@ def parse_request(data: bytes):
         return None, None, None
 
 
-class TheServer:
+class ProxyServer:
     """
     Основной класс сервера
 

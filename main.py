@@ -1,5 +1,5 @@
 import sys
-from Server.ProxyServer import TheServer
+from Server.ProxyServer import ProxyServer
 
 
 HOST = 'localhost'
@@ -8,7 +8,7 @@ PORT = 8080
 
 if __name__ == '__main__':
 
-    server = TheServer(HOST, PORT)
+    server = ProxyServer(HOST, PORT)
 
     print(f"Сервер запущен на {HOST}:{PORT}")
     try:
