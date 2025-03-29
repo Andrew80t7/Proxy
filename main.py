@@ -1,10 +1,8 @@
 import sys
 from Server.ProxyServer import ProxyServer
 
-
 HOST = 'localhost'
 PORT = 8080
-
 
 if __name__ == '__main__':
 

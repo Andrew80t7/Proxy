@@ -20,3 +20,5 @@ def test_https_request():
 
 if __name__ == '__main__':
     test_https_request()
+
+# тесты,логи, подключение кбраузеру
