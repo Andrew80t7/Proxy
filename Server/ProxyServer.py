@@ -1,8 +1,9 @@
 import socket
 import time
 import select
-
+import errno
 from Connection.Forward import Forward
+from Logs.logger import get_logger
 
 # Размер буфера
 BUFFER_SIZE = 4096
@@ -10,32 +11,53 @@ BUFFER_SIZE = 4096
 # Задержка
 DELAY = 0.0001
 
+# Таймаут для операций с сокетами
+SOCKET_TIMEOUT = 5
 
-def modify_request(data: bytes):
+# Максимальное количество соединений
+MAX_CONNECTIONS = 1000
+
+# логгер
+logger = get_logger()
+
+
+def modify_request(data: bytes) -> bytes:
     """
-    Преобразует абсолютный URL в относительный путь.
-
+    Преобразует абсолютный URL в относительный путь и модифицирует заголовок X-Forwarded-For.
     """
     try:
-        lines = data.split(b'\r\n')
-        if not lines:
+        # Разбиваем заголовки и тело запроса
+        parts = data.split(b'\r\n\r\n', 1)
+        if len(parts) != 2:
             return data
+        headers, body = parts
 
-        first_line = lines[0].decode('utf-8', errors='ignore')
-        parts = first_line.split(' ')
-        if len(parts) < 3:
-            return data
-        method, url, protocol = parts
+        header_lines = headers.split(b'\r\n')
+        new_header_lines = []
+        found = False
+        for line in header_lines:
+            if line.lower().startswith(b'x-forwarded-for:'):
+                new_header_lines.append(b'X-Forwarded-For: 127.0.0.1')
+                found = True
+            else:
+                new_header_lines.append(line)
 
-        if url.startswith(("http://", "https://")):
-            pos = url.find('/', url.find("://") + 3)
-            path = url[pos:] if pos != -1 else "/"
-            new_first_line = f"{method} {path} {protocol}"
-            lines[0] = new_first_line.encode('utf-8')
-            new_data = b'\r\n'.join(lines)
+        if not found:
+            new_header_lines.append(b'X-Forwarded-For: 127.0.0.1')
 
-            return new_data
-        return data
+        if new_header_lines:
+            first_line = new_header_lines[0].decode('utf-8', errors='ignore')
+            parts_first = first_line.split(' ')
+            if len(parts_first) >= 3:
+                method, url, protocol = parts_first[:3]
+                if url.startswith(("http://", "https://")):
+                    pos = url.find('/', url.find("://") + 3)
+                    path = url[pos:] if pos != -1 else "/"
+                    new_first_line = f"{method} {path} {protocol}"
+                    new_header_lines[0] = new_first_line.encode('utf-8')
+
+        new_headers = b'\r\n'.join(new_header_lines)
+        return new_headers + b'\r\n\r\n' + body
 
     except UnicodeError:
         return data
@@ -93,126 +115,285 @@ class ProxyServer:
         """
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.server.settimeout(SOCKET_TIMEOUT)
+        self.server.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         self.server.bind((host, port))
         self.server.listen(200)
         self.input_list = [self.server]
         self.channel = {}
+        self.running = True
+        self.last_cleanup = time.time()
+        logger.info(f"Прокси-сервер инициализирован на {host}:{port}")
+
+    def _cleanup_inactive_connections(self):
+        """
+        Очищает неактивные соединения
+        """
+        current_time = time.time()
+        if current_time - self.last_cleanup < 60:  # Проверяем каждую минуту
+            return
+
+        try:
+            # Очищаем невалидные сокеты
+            valid_sockets = []
+            for s in self.input_list:
+                try:
+                    if s.fileno() != -1:
+                        valid_sockets.append(s)
+                    else:
+                        if s in self.channel:
+                            self._cleanup_peer_connection(s)
+                except OSError:
+                    if s in self.channel:
+                        self._cleanup_peer_connection(s)
+
+            self.input_list = valid_sockets
+            self.last_cleanup = current_time
+            logger.info(f"Очищено {len(self.input_list)} активных соединений")
+        except OSError as e:
+            logger.error(f"Ошибка при очистке соединений: {e}")
 
     def main_loop(self):
         """Основной цикл обработки событий сервера."""
-        while True:
-            time.sleep(DELAY)
-            input_ready, _, _ = select.select(self.input_list, [], [], 0)
-            for s in input_ready:
-                if s == self.server:
-                    self.on_accept()
+        logger.info("Сервер запущен и ожидает подключений")
+        while self.running:
+            try:
+                time.sleep(DELAY)
+                self._cleanup_inactive_connections()
+
+                if not self.input_list:
+                    logger.warning("Нет активных сокетов, завершение работы")
+                    break
+
+                # Используем таймаут для select, чтобы не блокировать навсегда
+                input_ready, _, _ = select.select(self.input_list, [], [], 0.1)
+                for s in input_ready:
+                    if s == self.server:
+                        self.on_accept()
+                    else:
+                        self.on_recv(s)
+            except select.error as e:
+                if e.args[0] == errno.EBADF:
+                    logger.warning("Обнаружен невалидный файловый дескриптор, очистка сокетов")
+                    self._cleanup_inactive_connections()
                 else:
-                    self.on_recv(s)
+                    logger.error(f"Ошибка select: {e}")
+            except Exception as e:
+                logger.error(f"Ошибка в главном цикле: {e}")
+                self._cleanup_inactive_connections()
 
     def on_accept(self):
         """
         Обрабатывает новое клиентское подключение.
         """
-        clientsock, clientaddr = self.server.accept()
-        print(f"{clientaddr} подключился")
-        self.input_list.append(clientsock)
-        self.channel[clientsock] = {'peer': None, 'parse': True, 'type': None}
+        try:
+            clientsock, clientaddr = self.server.accept()
+            clientsock.settimeout(SOCKET_TIMEOUT)
+            # Устанавливаем TCP_NODELAY для уменьшения задержек
+            clientsock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+            logger.info(f"Новое подключение от {clientaddr}")
+            self.input_list.append(clientsock)
+            self.channel[clientsock] = {'peer': None, 'parse': True, 'type': None}
+        except socket.timeout:
+            # Игнорируем таймауты при принятии соединений
+            pass
+        except OSError as e:
+            logger.error(f"Ошибка при принятии соединения: {e}")
 
     def on_recv(self, s: socket.socket):
         """
         Обрабатывает данные от клиента или сервера.
 
         """
+        try:
+            # Проверяем, что сокет все еще валиден
+            if s.fileno() == -1:
+                logger.warning("Получен запрос от невалидного сокета")
+                self._cleanup_inactive_connections()
+                return
 
-        data = s.recv(BUFFER_SIZE)
-        if not data:
-            self.on_close(s)
-            return
+            data = s.recv(BUFFER_SIZE)
+            if not data:
+                self.on_close(s)
+                return
 
-        if s in self.channel and self.channel[s]['parse']:
-            method, host, port = parse_request(data)
-            if method and host and port:
-                forward = Forward().start(host, port)
-                if forward:
-                    self._setup_forward_connection(s, forward, method, data)
+            if s in self.channel and self.channel[s]['parse']:
+                method, host, port = parse_request(data)
+                if method and host and port:
+                    logger.debug(f"Запрос: {method} {host}:{port}")
+                    forward = Forward().start(host, port)
+                    if forward:
+                        self._setup_forward_connection(s, forward, method, data)
+                    else:
+                        self._handle_connection_error(host, port, s)
                 else:
-                    self._handle_connection_error(host, port, s)
+                    self._handle_invalid_request(s)
             else:
-                self._handle_invalid_request(s)
-        else:
-            self._forward_data(s, data)
+                self._forward_data(s, data)
+        except socket.timeout:
+            # Игнорируем таймауты при чтении данных
+            pass
+        except ConnectionAbortedError:
+            logger.warning(f"Соединение разорвано: {s.getpeername()}")
+            self.on_close(s)
+        except OSError as e:
+            logger.error(f"Ошибка при получении данных: {e}")
+            self.on_close(s)
 
     def _setup_forward_connection(self, s: socket.socket, forward: socket.socket, method: str, data: bytes):
         """
         Настраивает соединение с целевым сервером.
         """
-        self.channel[s]['peer'] = forward
-        self.channel[forward] = {'peer': s, 'parse': False, 'type': method}
+        try:
+            self.channel[s]['peer'] = forward
+            self.channel[forward] = {'peer': s, 'parse': False, 'type': method}
 
-        if method == 'CONNECT':
-            self._handle_https_connection(s)
-        else:
-            self._handle_http_connection(s, forward, data)
+            if method == 'CONNECT':
+                self._handle_https_connection(s)
+            else:
+                self._handle_http_connection(s, forward, data)
+        except OSError as e:
+            logger.error(f"Ошибка при настройке соединения: {e}")
+            self.on_close(s)
 
     def _handle_https_connection(self, s: socket.socket):
         """
         Обрабатывает HTTPS-соединение
         """
-        s.send(b'HTTP/1.1 200 Connection Established\r\n\r\n')
-        self.channel[s]['type'] = 'CONNECT'
-        self.channel[s]['parse'] = False
-        self.input_list.append(self.channel[s]['peer'])
+        try:
+            logger.debug("Установка HTTPS-соединения")
+            # Отправляем успешный ответ клиенту
+            s.send(b'HTTP/1.1 200 Connection Established\r\n\r\n')
+
+            # Настраиваем соединение
+            self.channel[s]['type'] = 'CONNECT'
+            self.channel[s]['parse'] = False
+
+            # Добавляем peer в список для мониторинга
+            peer = self.channel[s]['peer']
+            if peer and peer not in self.input_list:
+                self.input_list.append(peer)
+                logger.debug("Peer добавлен в список мониторинга")
+
+            logger.info("HTTPS-соединение установлено")
+        except OSError as e:
+            logger.error(f"Ошибка при установке HTTPS-соединения: {e}")
+            self.on_close(s)
 
     def _handle_http_connection(self, s: socket.socket, forward: socket.socket, data: bytes):
         """
         Обрабатывает HTTP-соединение.
         """
-        new_data = modify_request(data)
-        forward.send(new_data)
-        self.channel[s]['type'] = 'HTTP'
-        self.channel[s]['parse'] = False
-        self.input_list.append(forward)
+        try:
+            logger.debug("Обработка HTTP-соединения")
+            new_data = modify_request(data)
+            forward.send(new_data)
+            self.channel[s]['type'] = 'HTTP'
+            self.channel[s]['parse'] = False
+            self.input_list.append(forward)
+        except OSError as e:
+            logger.error(f"Ошибка при обработке HTTP-соединения: {e}")
+            self.on_close(s)
 
     def _handle_connection_error(self, host: str, port: int, s: socket.socket):
         """
         Обрабатывает ошибку подключения.
         """
-        print(f"Не удалось подключиться к {host}:{port}")
+        logger.error(f"Не удалось подключиться к {host}:{port}")
         self.on_close(s)
 
     def _handle_invalid_request(self, s: socket.socket):
         """
         Обрабатывает некорректный запрос.
         """
+        logger.warning("Получен некорректный запрос")
         self.on_close(s)
 
     def _forward_data(self, s: socket.socket, data: bytes):
         """
         Перенаправляет данные между клиентом и сервером.
         """
-        if s in self.channel and self.channel[s]['peer']:
-            self.channel[s]['peer'].send(data)
+        try:
+            if s in self.channel and self.channel[s]['peer']:
+                # Проверяем, что peer-сокет валиден
+                peer = self.channel[s]['peer']
+                if peer.fileno() == -1:
+                    logger.warning("Попытка отправки данных на невалидный сокет")
+                    self.on_close(s)
+                    return
+
+                # Отправляем данные
+                try:
+                    peer.send(data)
+                except socket.error as e:
+                    logger.error(f"Ошибка при отправке данных: {e}")
+                    self.on_close(s)
+        except OSError as e:
+            logger.error(f"Ошибка при перенаправлении данных: {e}")
+            self.on_close(s)
 
     def on_close(self, s: socket.socket):
         """
         Закрывает соединение и освобождает ресурсы.
 
         """
-        if s in self.input_list:
-            print(f"{s.getpeername()} отключился")
-            self.input_list.remove(s)
-            if s in self.channel:
-                self._cleanup_peer_connection(s)
-            s.close()
+        try:
+            if s in self.input_list:
+                try:
+                    client_addr = s.getpeername()
+                    logger.info(f"Закрытие соединения с {client_addr}")
+                except OSError:
+                    logger.info("Закрытие соединения с неизвестным адресом")
+
+                self.input_list.remove(s)
+                if s in self.channel:
+                    self._cleanup_peer_connection(s)
+
+                try:
+                    s.close()
+                except OSError:
+                    pass
+        except OSError as e:
+            logger.error(f"Ошибка при закрытии соединения: {e}")
 
     def _cleanup_peer_connection(self, s: socket.socket):
         """
         Очищает связанные соединения.
         """
-        peer = self.channel[s]['peer']
-        if peer and peer in self.input_list:
-            self.input_list.remove(peer)
-            peer.close()
-        del self.channel[s]
-        if peer in self.channel:
-            del self.channel[peer]
+        try:
+            if s in self.channel:
+                peer = self.channel[s]['peer']
+                if peer and peer in self.input_list:
+                    self.input_list.remove(peer)
+                    try:
+                        peer.close()
+                    except OSError:
+                        pass
+                del self.channel[s]
+                if peer in self.channel:
+                    del self.channel[peer]
+        except OSError as e:
+            logger.error(f"Ошибка при очистке соединения: {e}")
+
+    def shutdown(self):
+        """
+        Корректно завершает работу сервера.
+        """
+        logger.info("Завершение работы сервера")
+        self.running = False
+
+        # Закрываем все соединения
+        for s in list(self.input_list):
+            try:
+                if s != self.server:
+                    self.on_close(s)
+            except OSError:
+                pass
+
+        # Закрываем серверный сокет
+        try:
+            self.server.close()
+        except OSError:
+            pass
+
+        logger.info("Сервер остановлен")
