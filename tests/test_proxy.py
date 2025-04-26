@@ -14,7 +14,6 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 class TestProxyServer(unittest.TestCase):
     """Тесты для прокси-сервера"""
 
-    # Аннотации для IDE
     host: str
     port: int
     server: ProxyServer
@@ -92,3 +91,11 @@ class TestProxyServer(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+# Дампы скачивание,
+# блокировщик рекламы, встраиватель рекламы,
+# всё прон --> администрация белого дома,
+# все казики --> ссылки на телеграм канал матмеха
+
+# Сайты казика взять с реестра рос.ком надзора

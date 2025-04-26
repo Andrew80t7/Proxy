@@ -4,12 +4,12 @@ from datetime import datetime
 
 # Определяем директорию для хранения логов
 log_dir = os.path.dirname(os.path.abspath(
-    __file__))  # Получаем абсолютный путь текущего файла, чтобы использовать его как директорию для логов.
+    __file__))
 
-if not os.path.exists(log_dir):  # Проверяем, существует ли директория для логов.
-    os.makedirs(log_dir)  # Если директория не существует, создаем её.
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
 
-# Формат вывода логов (включая дату, имя логгера, уровень логирования и сообщение)
+
 log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
 # Формат отображения даты (год-месяц-день час:минуты:секунды)
