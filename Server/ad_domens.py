@@ -1,6 +1,6 @@
 import re
 
-input_path= 'easylist.txt'
+input_path= '../easylist.txt'
 output_path = 'ad_hosts.txt'
 
 domains = set()

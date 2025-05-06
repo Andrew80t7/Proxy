@@ -1,15 +1,14 @@
 import socket
 import time
+from datetime import datetime
+
 import select
 import errno
+import os
 from Connection.Forward import Forward
 from Logs.logger import get_logger
-import re
-import os
-import gzip
-from datetime import datetime
+from typing import Tuple, List
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse
 
 DUMP_DIR = os.path.join(os.path.dirname(__file__), "dumps")
 os.makedirs(DUMP_DIR, exist_ok=True)
@@ -17,113 +16,60 @@ os.makedirs(DUMP_DIR, exist_ok=True)
 BASE_DIR = os.path.dirname(__file__)
 AD_HOSTS_PATH = os.path.join(BASE_DIR, 'ad_hosts.txt')
 
-# BASE_DIR = os.path.dirname(__file__)
-# HTML_PATH = os.path.join(BASE_DIR, 'html_content.html')
-
-HTML_DUMP_DIR = os.path.join(os.path.dirname(__file__), "html_dumps")
-os.makedirs(HTML_DUMP_DIR, exist_ok=True)
-
 AD_HOSTS_1 = set()
 
 logger = get_logger()
 
 
-def decode_chunked(body: bytes) -> bytes:
+def modify_html(html: bytes, url: str) -> Tuple[bytes, List[dict]]:
     """
-    Простая реализация декодирования Transfer-Encoding: chunked
+    удаляет рекламу
     """
-    decoded = b''
-    i = 0
-    while True:
-        # читаем размер следующего чанка (шестнадцатерично)
-        pos = body.find(b'\r\n', i)
-        if pos == -1:
-            break
-        length = int(body[i:pos].split(b';')[0], 16)
-        if length == 0:
-            break
-        start = pos + 2
-        decoded += body[start:start + length]
-        i = start + length + 2  # пропускаем \r\n после данных
-    return decoded
-
-
-def modify_html(html: bytes) -> bytes:
-    """
-    Удаляет из HTML теги, связанные с рекламными доменами:
-    <a>, <script>, <iframe>, <img> и т.д.
-    """
+    blocked_elements = []
     try:
         soup = BeautifulSoup(html, 'html.parser')
 
-        for tag in soup.find_all(attrs={'data-widget-id': True}):
-            tag.decompose()
-
-        for tag in soup.find_all('div', attrs={'data-type': 'container'}):
-            tag.decompose()
-
-        for tag in soup.find_all('div', attrs={'data-type': 'adsContainer'}):
-            tag.decompose()
-        for tag in soup.find_all('div', attrs={'data-type': 'mainContainer'}):
-            tag.decompose()
-
-        for ad in soup.select('div[data-name="adWrapper"]'):
-            ad.decompose()
-
-        for ad in soup.find_all('div', attrs={'data-ad-id': True}):
-            ad.decompose()
-
-        for ad in soup.select('div[data-name="adaptiveConstructorAd"]'):
-            ad.decompose()
-
-        # 1) Удаляем все ссылки <a> на рекламные домены
-        for a in soup.find_all('a', href=True):
-            host = urlparse(a['href']).netloc
-            if is_ad_host(host):
-                a.decompose()
-
-        # Удаляем скрипты <script> с src на рекламные домены
-        for tag in soup.find_all('script', src=True):
-            host = urlparse(tag['src']).netloc
-            if is_ad_host(host):
-                tag.decompose()
-
-        # То же для <iframe>
-        for tag in soup.find_all('iframe', src=True):
-            host = urlparse(tag['src']).netloc
-            if is_ad_host(host):
-                tag.decompose()
-
-        # И для изображений <img>
-        for img in soup.find_all('img', src=True):
-            host = urlparse(img['src']).netloc
-            if is_ad_host(host):
-                img.decompose()
-
-        for grp in soup.select('div.left-menu__group'):
-            if grp.find('a.left-menu__group__link', href="/reklama/"):
-                grp.decompose()
-
-        for group in soup.find_all('div', class_='left-menu__group'):
-            link = group.find('a', class_='left-menu__group__link', href=True)
-            if link and link.get_text(strip=True) == 'Реклама':
-                group.decompose()
-
-        # Удаляем внешние скрипты с рекламных доменов
-        for tag in soup.find_all(['script', 'iframe']):
-            src = tag.get('src', '')
-            if any(ad_domain in src for ad_domain in
-                   ['doubleclick.net', 'googlesyndication.com', 'adfox.ru', 'yandex.ru/ads']):
-                tag.decompose()  # Удаляем известные рекламные блоки по class/id
-
-        for selector in ['.yandex_rtb_R-A-1654496-5', '#adfox_mp_0_108530041342_2']:
+        ad_selectors = [
+            'div[data-ad-target]',
+            '.ad-container',
+            '.ad-wrapper',
+            'div[id^="adfox_"]',
+            'iframe[src*="ads."]',
+            'div[class*="banner_ad"]',
+            'div[data-type="adsContainer"]',
+            'script[src*="adservice"]',
+            'img[src*="ads."]'
+        ]
+        for selector in ad_selectors:
             for tag in soup.select(selector):
+                blocked_elements.append({
+                    'selector': selector,
+                    'src': tag.get('src', ''),
+                    'classes': tag.get('class', ''),
+                    'tag': tag.name
+                })
                 tag.decompose()
 
-        return str(soup).encode('utf-8')
+        style = soup.new_tag('style')
+        style.string = '''
+            .telegram-banner, .casino-banner, .shopping-banner {
+                position: fixed !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                z-index: 9999 !important;
+                visibility: visible !important;
+            }
+        '''
+        if soup.head:
+            soup.head.append(style)
+        else:
+            soup.insert(0, style)
+
+        return str(soup).encode('utf-8'), blocked_elements
+
     except Exception as e:
-        logger.error(f"Ошибка при модификации HTML: {e}")
-    return html
+        logger.error(f"HTML modification error: {e}")
+        return html, blocked_elements
 
 
 with open('ad_hosts.txt', 'r') as f:
@@ -140,13 +86,18 @@ def is_ad_host(hst: str) -> bool:
 
 def save_dump(data: bytes, direction: str):
     """
-    Сохраняет байты data в файл с меткой direction.
+    Сохраняет данные data в файл:
+
     """
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-    filename = f"{direction}_{ts}.dump"
+
+    ts = datetime.now().isoformat(timespec='microseconds').replace(':', '')
+    filename = f"{ts}_{direction}.dump"
     path = os.path.join(DUMP_DIR, filename)
-    with open(path, 'wb') as f:
-        f.write(data)
+
+    with open(path, 'wb') as file:
+        header = f"Timestamp: {ts}\nDirection: {direction}\n\n"
+        file.write(header.encode('utf-8', errors='ignore'))
+        file.write(data)
 
     logger.debug(f"Dump сохранён: {path}")
 
@@ -179,7 +130,6 @@ def modify_request(data: bytes) -> bytes:
             return data
         method, url, proto = first
 
-        # только если URL абсолютный — отрезаем хост
         if url.startswith("http://") or url.startswith("https://"):
             idx = url.find('/', url.find('://') + 3)
             path = url[idx:] if idx != -1 else '/'
@@ -192,12 +142,10 @@ def modify_request(data: bytes) -> bytes:
 def parse_request(data: bytes):
     '''Извлекает метод, хост и порт'''
 
-    # Разделяем данные на строки по \r\n
     lines = data.split(b'\r\n')
     if not lines:
         return None, None, None
 
-    # Декодируем первую строку запроса
     first_line = lines[0].decode('utf-8', errors='ignore')
     parts = first_line.split(' ')
     if len(parts) < 2:
@@ -205,7 +153,6 @@ def parse_request(data: bytes):
 
     method = parts[0]
 
-    # Обработка метода CONNECT
     if method == 'CONNECT':
         host_port = parts[1].split(':')
         host = host_port[0]
@@ -237,7 +184,7 @@ class ProxyServer:
 
     """
 
-    def __init__(self, host: str, port: int):
+    def __init__(self, HOST: str, PORT: int):
         """
         Инициализирует прокси-сервер.
 
@@ -246,25 +193,27 @@ class ProxyServer:
         self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server.settimeout(SOCKET_TIMEOUT)
         self.server.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-        self.server.bind((host, port))
+        self.server.bind((HOST, PORT))
         self.server.listen(200)
         self.input_list = [self.server]
         self.channel = {}
         self.running = True
         self.last_cleanup = time.time()
-        logger.info(f"Прокси-сервер инициализирован на {host}:{port}")
+        logger.info(f"Прокси-сервер инициализирован на {HOST}:{PORT}")
 
     def _cleanup_inactive_connections(self):
         """
         Очищает неактивные соединения
         """
+
         current_time = time.time()
         if current_time - self.last_cleanup < 60:  # Проверяем каждую минуту
             return
 
         try:
-            # Очищаем невалидные сокеты
+
             valid_sockets = []
+
             for s in self.input_list:
                 try:
                     if s.fileno() != -1:
@@ -283,8 +232,11 @@ class ProxyServer:
             logger.error(f"Ошибка при очистке соединений: {e}")
 
     def main_loop(self):
-        """Основной цикл обработки событий сервера."""
+        """
+        Основной цикл обработки событий сервера.
+        """
         logger.info("Сервер запущен и ожидает подключений")
+
         while self.running:
             try:
                 time.sleep(DELAY)
@@ -346,6 +298,7 @@ class ProxyServer:
                 return
 
             # Сохраняем запросы в дампс
+
             save_dump(data, "request")
 
             if s in self.channel and self.channel[s]['parse']:
@@ -467,20 +420,14 @@ class ProxyServer:
         self.on_close(s)
 
     def _forward_data(self, s: socket.socket, data: bytes):
-        """
-        Перенаправляет данные от сервера клиенту. Если это HTML,
-        декодирует chunked/gzip, вызывает modify_html, вставляет счётчик
-        и обновляет заголовок Content-Length.
-        """
         peer = self.channel[s]['peer']
-        save_dump(data, "response")  # ваш existing dump
+        # buf = self.channel[s].sedtdefault('resp_bu')
+        save_dump(data, "response")
 
-        # HTTPS-туннель — просто пересылаем
         if self.channel[s].get('type') != 'HTTP':
             peer.send(data)
             return
 
-        # собираем буфер
         buf = self.channel[s].setdefault('resp_buf', b'') + data
         if b'\r\n\r\n' not in buf:
             self.channel[s]['resp_buf'] = buf
@@ -490,36 +437,7 @@ class ProxyServer:
         headers_str = headers.decode('utf-8', errors='ignore').lower()
         is_html = 'content-type:' in headers_str and 'text/html' in headers_str
 
-        if is_html:
-            # Декодируем chunked и gzip
-            if 'transfer-encoding: chunked' in headers_str:
-                body = decode_chunked(body)
-            if 'content-encoding: gzip' in headers_str:
-                body = gzip.decompress(body)
-
-            # Сохраняем декодированный HTML для отладки
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-            decoded_path = os.path.join(HTML_DUMP_DIR, f"decoded_{ts}.html")
-            try:
-                with open(decoded_path, 'wb') as f:
-                    f.write(body)
-                logger.debug(f"Декодированный HTML сохранён в {decoded_path}")
-            except Exception as e:
-                logger.error(f"Не удалось сохранить декодированный HTML: {e}")
-
-            # Теперь можно модифицировать рекламо-элементы
-            new_body = modify_html(body)
-
-            # … вставка сниппета, пересчёт Content-Length …
-            new_headers = re.sub(
-                rb'(content-length:\s*)(\d+)',
-                lambda m: m.group(1) + str(len(new_body)).encode(),
-                headers,
-                flags=re.IGNORECASE
-            )
-            peer.send(new_headers + b'\r\n\r\n' + new_body)
-            self.channel[s].pop('resp_buf', None)
-            return
+        logger.debug(f"is_html={is_html}, headers snippet: {headers_str[:100]!r}")
 
     def on_close(self, s: socket.socket):
         """
@@ -566,12 +484,11 @@ class ProxyServer:
 
     def shutdown(self):
         """
-        Корректно завершает работу сервера.
+          завершает работу сервера.
         """
         logger.info("Завершение работы сервера")
         self.running = False
 
-        # Закрываем все соединения
         for s in list(self.input_list):
             try:
                 if s != self.server:
@@ -579,7 +496,6 @@ class ProxyServer:
             except OSError:
                 pass
 
-        # Закрываем серверный сокет
         try:
             self.server.close()
         except OSError:

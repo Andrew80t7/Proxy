@@ -8,7 +8,6 @@ class Forward:
     """
     Класс для установки прямого соединения с сервером
     """
-
     def __init__(self):
         self.forward = None
         self.timeout = 5  # Таймаут для соединения в секундах

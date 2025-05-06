@@ -15,10 +15,13 @@ if __name__ == '__main__':
         server = ProxyServer(HOST, PORT)
         logger.info(f"Сервер запущен на {HOST}:{PORT}")
         server.main_loop()
+
+
     except KeyboardInterrupt:
         logger.info("Получен сигнал прерывания, остановка сервера")
         if server:
             server.shutdown()
+
     except Exception as e:
         logger.error(f"Ошибка при работе сервера: {e}")
         if server:
