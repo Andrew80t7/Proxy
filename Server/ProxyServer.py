@@ -14,7 +14,7 @@ DUMP_DIR = os.path.join(os.path.dirname(__file__), "dumps")
 os.makedirs(DUMP_DIR, exist_ok=True)
 
 BASE_DIR = os.path.dirname(__file__)
-AD_HOSTS_PATH = os.path.join(BASE_DIR, 'ad_hosts.txt')
+AD_HOSTS_PATH = os.path.join(BASE_DIR, "ad_hosts.txt")
 
 AD_HOSTS_1 = set()
 
@@ -27,31 +27,33 @@ def modify_html(html: bytes, url: str) -> Tuple[bytes, List[dict]]:
     """
     blocked_elements = []
     try:
-        soup = BeautifulSoup(html, 'html.parser')
+        soup = BeautifulSoup(html, "html.parser")
 
         ad_selectors = [
-            'div[data-ad-target]',
-            '.ad-container',
-            '.ad-wrapper',
+            "div[data-ad-target]",
+            ".ad-container",
+            ".ad-wrapper",
             'div[id^="adfox_"]',
             'iframe[src*="ads."]',
             'div[class*="banner_ad"]',
             'div[data-type="adsContainer"]',
             'script[src*="adservice"]',
-            'img[src*="ads."]'
+            'img[src*="ads."]',
         ]
         for selector in ad_selectors:
             for tag in soup.select(selector):
-                blocked_elements.append({
-                    'selector': selector,
-                    'src': tag.get('src', ''),
-                    'classes': tag.get('class', ''),
-                    'tag': tag.name
-                })
+                blocked_elements.append(
+                    {
+                        "selector": selector,
+                        "src": tag.get("src", ""),
+                        "classes": tag.get("class", ""),
+                        "tag": tag.name,
+                    }
+                )
                 tag.decompose()
 
-        style = soup.new_tag('style')
-        style.string = '''
+        style = soup.new_tag("style")
+        style.string = """
             .telegram-banner, .casino-banner, .shopping-banner {
                 position: fixed !important;
                 bottom: 20px !important;
@@ -59,29 +61,29 @@ def modify_html(html: bytes, url: str) -> Tuple[bytes, List[dict]]:
                 z-index: 9999 !important;
                 visibility: visible !important;
             }
-        '''
+        """
         if soup.head:
             soup.head.append(style)
         else:
             soup.insert(0, style)
 
-        return str(soup).encode('utf-8'), blocked_elements
+        return str(soup).encode("utf-8"), blocked_elements
 
     except Exception as e:
         logger.error(f"HTML modification error: {e}")
         return html, blocked_elements
 
 
-with open('ad_hosts.txt', 'r') as f:
+with open("ad_hosts.txt", "r") as f:
     for line in f:
         host = line.strip()
-        if host and not host.startswith('#'):
+        if host and not host.startswith("#"):
             AD_HOSTS_1.add(host)
 
 
 def is_ad_host(hst: str) -> bool:
-    """Проверка, является ли домен рекламным """
-    return any(hst == d or hst.endswith('.' + d) for d in AD_HOSTS_1)
+    """Проверка, является ли домен рекламным"""
+    return any(hst == d or hst.endswith("." + d) for d in AD_HOSTS_1)
 
 
 def save_dump(data: bytes, direction: str):
@@ -90,13 +92,13 @@ def save_dump(data: bytes, direction: str):
 
     """
 
-    ts = datetime.now().isoformat(timespec='microseconds').replace(':', '')
+    ts = datetime.now().isoformat(timespec="microseconds").replace(":", "")
     filename = f"{ts}_{direction}.dump"
     path = os.path.join(DUMP_DIR, filename)
 
-    with open(path, 'wb') as file:
+    with open(path, "wb") as file:
         header = f"Timestamp: {ts}\nDirection: {direction}\n\n"
-        file.write(header.encode('utf-8', errors='ignore'))
+        file.write(header.encode("utf-8", errors="ignore"))
         file.write(data)
 
     logger.debug(f"Dump сохранён: {path}")
@@ -120,54 +122,56 @@ logger = get_logger()
 
 def modify_request(data: bytes) -> bytes:
     try:
-        lines = data.split(b'\r\n')
+        lines = data.split(b"\r\n")
         if not lines:
             return data
 
         # первая строка: метод, URL, протокол
-        first = lines[0].decode('utf-8', errors='ignore').split(' ')
+        first = lines[0].decode("utf-8", errors="ignore").split(" ")
         if len(first) < 3:
             return data
         method, url, proto = first
 
         if url.startswith("http://") or url.startswith("https://"):
-            idx = url.find('/', url.find('://') + 3)
-            path = url[idx:] if idx != -1 else '/'
-            lines[0] = b' '.join([method.encode(), path.encode(), proto.encode()])
-        return b'\r\n'.join(lines)
+            idx = url.find("/", url.find("://") + 3)
+            path = url[idx:] if idx != -1 else "/"
+            lines[0] = b" ".join(
+                [method.encode(), path.encode(), proto.encode()]
+            )
+        return b"\r\n".join(lines)
     except UnicodeError:
         return data
 
 
 def parse_request(data: bytes):
-    '''Извлекает метод, хост и порт'''
+    """Извлекает метод, хост и порт"""
 
-    lines = data.split(b'\r\n')
+    lines = data.split(b"\r\n")
     if not lines:
         return None, None, None
 
-    first_line = lines[0].decode('utf-8', errors='ignore')
-    parts = first_line.split(' ')
+    first_line = lines[0].decode("utf-8", errors="ignore")
+    parts = first_line.split(" ")
     if len(parts) < 2:
         return None, None, None
 
     method = parts[0]
 
-    if method == 'CONNECT':
-        host_port = parts[1].split(':')
+    if method == "CONNECT":
+        host_port = parts[1].split(":")
         host = host_port[0]
         port = int(host_port[1]) if len(host_port) > 1 else 443
-        return 'CONNECT', host, port
+        return "CONNECT", host, port
     else:
         # Обработка заголовков
         for line in lines[1:]:
             try:
                 # Декодируем каждую строку заголовка
-                line_str = line.decode('utf-8', errors='ignore')
-                if line_str.lower().startswith('host:'):
-                    host_port = line_str.split(':', 1)[1].strip()
-                    if ':' in host_port:
-                        host, port = host_port.split(':')
+                line_str = line.decode("utf-8", errors="ignore")
+                if line_str.lower().startswith("host:"):
+                    host_port = line_str.split(":", 1)[1].strip()
+                    if ":" in host_port:
+                        host, port = host_port.split(":")
                         port = int(port)
                     else:
                         host = host_port
@@ -255,7 +259,9 @@ class ProxyServer:
                         self.on_recv(s)
             except select.error as e:
                 if e.args[0] == errno.EBADF:
-                    logger.warning("Обнаружен невалидный файловый дескриптор, очистка сокетов")
+                    logger.warning(
+                        "Обнаружен невалидный файловый дескриптор, очистка сокетов"
+                    )
                     self._cleanup_inactive_connections()
                 else:
                     logger.error(f"Ошибка select: {e}")
@@ -274,7 +280,11 @@ class ProxyServer:
             clientsock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             logger.info(f"Новое подключение от {clientaddr}")
             self.input_list.append(clientsock)
-            self.channel[clientsock] = {'peer': None, 'parse': True, 'type': None}
+            self.channel[clientsock] = {
+                "peer": None,
+                "parse": True,
+                "type": None,
+            }
         except socket.timeout:
             # Игнорируем таймауты при принятии соединений
             pass
@@ -301,22 +311,23 @@ class ProxyServer:
 
             save_dump(data, "request")
 
-            if s in self.channel and self.channel[s]['parse']:
+            if s in self.channel and self.channel[s]["parse"]:
                 method, host, port = parse_request(data)
 
-                if method == 'CONNECT' and host and is_ad_host(host):
+                if method == "CONNECT" and host and is_ad_host(host):
                     logger.info(f"BLOCKING CONNECT to ad host: {host}")
                     s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
                     return
 
                 if host and is_ad_host(host):
                     # Увеличиваем счётчик заблокированных запросов
-                    self.channel[s].setdefault('blocked_count', 0)
-                    self.channel[s]['blocked_count'] += 1
+                    self.channel[s].setdefault("blocked_count", 0)
+                    self.channel[s]["blocked_count"] += 1
 
                     logger.info(
-                        f"Блокировка запроса к рекламному домену: {host} (total blocked: {self.channel[s]['blocked_count']})")
-                    if method == 'CONNECT':
+                        f"Блокировка запроса к рекламному домену: {host} (total blocked: {self.channel[s]['blocked_count']})"
+                    )
+                    if method == "CONNECT":
                         # Блокируем HTTPS CONNECT
                         s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
                     else:
@@ -330,7 +341,9 @@ class ProxyServer:
                     logger.debug(f"Запрос: {method} {host}:{port}")
                     forward = Forward().start(host, port)
                     if forward:
-                        self._setup_forward_connection(s, forward, method, data)
+                        self._setup_forward_connection(
+                            s, forward, method, data
+                        )
                     else:
                         self._handle_connection_error(host, port, s)
                 else:
@@ -350,15 +363,21 @@ class ProxyServer:
             logger.error(f"Ошибка при получении данных: {e}")
             self.on_close(s)
 
-    def _setup_forward_connection(self, s: socket.socket, forward: socket.socket, method: str, data: bytes):
+    def _setup_forward_connection(
+        self,
+        s: socket.socket,
+        forward: socket.socket,
+        method: str,
+        data: bytes,
+    ):
         """
         Настраивает соединение с целевым сервером.
         """
         try:
-            self.channel[s]['peer'] = forward
-            self.channel[forward] = {'peer': s, 'parse': False, 'type': method}
+            self.channel[s]["peer"] = forward
+            self.channel[forward] = {"peer": s, "parse": False, "type": method}
 
-            if method == 'CONNECT':
+            if method == "CONNECT":
                 self._handle_https_connection(s)
             else:
                 self._handle_http_connection(s, forward, data)
@@ -373,14 +392,14 @@ class ProxyServer:
         try:
             logger.debug("Установка HTTPS-соединения")
             # Отправляем успешный ответ клиенту
-            s.send(b'HTTP/1.1 200 Connection Established\r\n\r\n')
+            s.send(b"HTTP/1.1 200 Connection Established\r\n\r\n")
 
             # Настраиваем соединение
-            self.channel[s]['type'] = 'CONNECT'
-            self.channel[s]['parse'] = False
+            self.channel[s]["type"] = "CONNECT"
+            self.channel[s]["parse"] = False
 
             # Добавляем peer в список для мониторинга
-            peer = self.channel[s]['peer']
+            peer = self.channel[s]["peer"]
             if peer and peer not in self.input_list:
                 self.input_list.append(peer)
                 logger.debug("Peer добавлен в список мониторинга")
@@ -390,7 +409,9 @@ class ProxyServer:
             logger.error(f"Ошибка при установке HTTPS-соединения: {e}")
             self.on_close(s)
 
-    def _handle_http_connection(self, s: socket.socket, forward: socket.socket, data: bytes):
+    def _handle_http_connection(
+        self, s: socket.socket, forward: socket.socket, data: bytes
+    ):
         """
         Обрабатывает HTTP-соединение.
         """
@@ -398,8 +419,8 @@ class ProxyServer:
             logger.debug("Обработка HTTP-соединения")
             new_data = modify_request(data)
             forward.send(new_data)
-            self.channel[s]['type'] = 'HTTP'
-            self.channel[s]['parse'] = False
+            self.channel[s]["type"] = "HTTP"
+            self.channel[s]["parse"] = False
             self.input_list.append(forward)
         except OSError as e:
             logger.error(f"Ошибка при обработке HTTP-соединения: {e}")
@@ -420,24 +441,26 @@ class ProxyServer:
         self.on_close(s)
 
     def _forward_data(self, s: socket.socket, data: bytes):
-        peer = self.channel[s]['peer']
+        peer = self.channel[s]["peer"]
         # buf = self.channel[s].sedtdefault('resp_bu')
         save_dump(data, "response")
 
-        if self.channel[s].get('type') != 'HTTP':
+        if self.channel[s].get("type") != "HTTP":
             peer.send(data)
             return
 
-        buf = self.channel[s].setdefault('resp_buf', b'') + data
-        if b'\r\n\r\n' not in buf:
-            self.channel[s]['resp_buf'] = buf
+        buf = self.channel[s].setdefault("resp_buf", b"") + data
+        if b"\r\n\r\n" not in buf:
+            self.channel[s]["resp_buf"] = buf
             return
 
-        headers, body = buf.split(b'\r\n\r\n', 1)
-        headers_str = headers.decode('utf-8', errors='ignore').lower()
-        is_html = 'content-type:' in headers_str and 'text/html' in headers_str
+        headers, body = buf.split(b"\r\n\r\n", 1)
+        headers_str = headers.decode("utf-8", errors="ignore").lower()
+        is_html = "content-type:" in headers_str and "text/html" in headers_str
 
-        logger.debug(f"is_html={is_html}, headers snippet: {headers_str[:100]!r}")
+        logger.debug(
+            f"is_html={is_html}, headers snippet: {headers_str[:100]!r}"
+        )
 
     def on_close(self, s: socket.socket):
         """
@@ -469,7 +492,7 @@ class ProxyServer:
         """
         try:
             if s in self.channel:
-                peer = self.channel[s]['peer']
+                peer = self.channel[s]["peer"]
                 if peer and peer in self.input_list:
                     self.input_list.remove(peer)
                     try:
@@ -484,7 +507,7 @@ class ProxyServer:
 
     def shutdown(self):
         """
-          завершает работу сервера.
+        завершает работу сервера.
         """
         logger.info("Завершение работы сервера")
         self.running = False

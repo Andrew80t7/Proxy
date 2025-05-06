@@ -12,11 +12,11 @@ class DumpRequestHandler(SimpleHTTPRequestHandler):
 
 
 def run_dump_server(port=8000):
-    server_address = ('', port)
+    server_address = ("", port)
     httpd = HTTPServer(server_address, DumpRequestHandler)
     print(f"Dump download server running on port {port}...")
     httpd.serve_forever()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_dump_server(8000)

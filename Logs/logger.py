@@ -3,29 +3,30 @@ import os
 from datetime import datetime
 
 # Определяем директорию для хранения логов
-log_dir = os.path.dirname(os.path.abspath(
-    __file__))
+log_dir = os.path.dirname(os.path.abspath(__file__))
 
 if not os.path.exists(log_dir):
     os.makedirs(log_dir)
 
 
-log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 # Формат отображения даты (год-месяц-день час:минуты:секунды)
-date_format = '%Y-%m-%d %H:%M:%S'
+date_format = "%Y-%m-%d %H:%M:%S"
 
 # Создание объекта логгера с именем 'ProxyServer'
-logger = logging.getLogger('ProxyServer')
+logger = logging.getLogger("ProxyServer")
 
 # Устанавливаем минимальный уровень логирования для этого логгера (DEBUG – самый низкий уровень, будет записываться всё)
 logger.setLevel(logging.DEBUG)
 
 # Создаем файл для логов
-log_file = os.path.join(log_dir, f'proxy_{datetime.now().strftime("%Y%m%d")}.log')
+log_file = os.path.join(
+    log_dir, f'proxy_{datetime.now().strftime("%Y%m%d")}.log'
+)
 
 # Создаем обработчик для записи логов в файл (с кодировкой UTF-8)
-file_handler = logging.FileHandler(log_file, encoding='utf-8')
+file_handler = logging.FileHandler(log_file, encoding="utf-8")
 
 # Устанавливаем уровень логирования для записи в файл
 file_handler.setLevel(logging.DEBUG)

@@ -8,6 +8,7 @@ class Forward:
     """
     Класс для установки прямого соединения с сервером
     """
+
     def __init__(self):
         self.forward = None
         self.timeout = 5  # Таймаут для соединения в секундах
@@ -15,11 +16,11 @@ class Forward:
     def start(self, host: str, port: int) -> None:
         """
         Устанавливает соединение с целевым сервером.
-        
+
         Args:
             host (str): Хост целевого сервера
             port (int): Порт целевого сервера
-            
+
         Returns:
             socket.socket: Сокет соединения или None в случае ошибки
         """

@@ -11,7 +11,7 @@ from Server.ProxyServer import (
     modify_request,
     parse_request,
     modify_html,
-    is_ad_host
+    is_ad_host,
 )
 
 logger = get_logger()
@@ -24,7 +24,7 @@ class TestProxyServer(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.host = 'localhost'
+        cls.host = "localhost"
         cls.port = 8080
         cls.server = ProxyServer(cls.host, cls.port)
         cls.thread = threading.Thread(target=cls.server.main_loop, daemon=True)
@@ -45,24 +45,37 @@ class TestProxyServer(unittest.TestCase):
 
     def test_http_through_proxy(self):
         """HTTP-запрос через прокси должен вернуть 200"""
-        resp = requests.get("http://example.com", proxies=self.proxies, timeout=10)
+        resp = requests.get(
+            "http://example.com", proxies=self.proxies, timeout=10
+        )
         self.assertEqual(resp.status_code, 200)
 
     def test_https_through_proxy(self):
         """HTTPS-запрос через прокси должен вернуть 200"""
-        resp = requests.get("https://example.com", proxies=self.proxies, timeout=10)
+        resp = requests.get(
+            "https://example.com", proxies=self.proxies, timeout=10
+        )
         self.assertEqual(resp.status_code, 200)
 
     def test_nonexistent_host(self):
         """Запрос к несуществующему хосту должен бросить исключение"""
         with self.assertRaises(requests.exceptions.RequestException):
-            requests.get("http://nonexistent.invalid", proxies=self.proxies, timeout=5)
+            requests.get(
+                "http://nonexistent.invalid", proxies=self.proxies, timeout=5
+            )
 
     def test_connect_timeout(self):
         """Таймаут соединения должен бросить ConnectTimeout или ReadTimeout"""
-        with self.assertRaises((requests.exceptions.ConnectTimeout, requests.exceptions.ReadTimeout)):
+        with self.assertRaises(
+            (
+                requests.exceptions.ConnectTimeout,
+                requests.exceptions.ReadTimeout,
+            )
+        ):
             # адрес, который не отвечает
-            requests.get("http://10.255.255.1", proxies=self.proxies, timeout=1)
+            requests.get(
+                "http://10.255.255.1", proxies=self.proxies, timeout=1
+            )
 
 
 class TestUtilities(unittest.TestCase):
@@ -94,6 +107,7 @@ class TestUtilities(unittest.TestCase):
 
     def test_is_ad_host(self):
         from Server.ProxyServer import AD_HOSTS_1
+
         AD_HOSTS_1.clear()
         AD_HOSTS_1.add("ads.test.com")
         self.assertTrue(is_ad_host("ads.test.com"))
