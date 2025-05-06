@@ -22,6 +22,11 @@ sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 class TestProxyServer(unittest.TestCase):
     """Тесты для ProxyServer"""
 
+    server = None
+    thread = None
+    port = None
+    host = None
+
     @classmethod
     def setUpClass(cls):
         cls.host = "localhost"
@@ -116,8 +121,9 @@ class TestUtilities(unittest.TestCase):
 
     def test_modify_html_removal(self):
         # HTML с контейнером рекламы и img с ads в src
-        html = b"<html><head></head><body><div class='ad-container'>X</div><img src='http://ads.test.com/a.jpg'/></body></html>"
-        cleaned_bytes, blocked = modify_html(html, "http://example.com")
+        html = (b"<html><head></head><body><div class='ad-container'>X</div><img "
+                b"src='http://ads.test.com/a.jpg'/></body></html>")
+        cleaned_bytes, blocked = modify_html(html)
         cleaned = cleaned_bytes.decode("utf-8", errors="ignore")
         self.assertNotIn("ad-container", cleaned)
         self.assertNotIn("ads.test.com", cleaned)

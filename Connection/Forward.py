@@ -1,4 +1,6 @@
 import socket
+from socket import socket
+
 from Logs.logger import get_logger
 
 logger = get_logger()
@@ -13,7 +15,7 @@ class Forward:
         self.forward = None
         self.timeout = 5  # Таймаут для соединения в секундах
 
-    def start(self, host: str, port: int) -> None:
+    def start(self, host: str, port: int) -> socket | None:
         """
         Устанавливает соединение с целевым сервером.
 

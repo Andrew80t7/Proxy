@@ -4,7 +4,7 @@ input_path = "../easylist.txt"
 output_path = "ad_hosts.txt"
 
 domains = set()
-pattern = re.compile(r"^([^#\|/$@:\s]+)")
+pattern = re.compile(r"^([^#|/$@:\s]+)")
 
 with open(input_path, "r", encoding="utf-8") as fin:
     for line in fin:

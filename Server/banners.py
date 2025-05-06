@@ -1,15 +1,9 @@
-from collections import defaultdict
-from urllib.parse import urlparse
-import re
-
-from Logs.logger import logger
-
 BANNERS = {
     "telegram": {
         "html": """
             <div class="telegram-banner" style="
                 position: fixed;
-                top: 20px;  
+                top: 20px;
                 right: 20px;
                 padding: 12px;
                 background: #fff;
@@ -49,8 +43,8 @@ BANNERS = {
             z-index: 9999;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         ">
-            <a href="https://www.whitehouse.gov/" 
-               target="_blank" 
+            <a href="https://www.whitehouse.gov/"
+               target="_blank"
                style="
                    text-decoration: none;
                    color: #cc0022;
@@ -75,8 +69,8 @@ BANNERS = {
             z-index: 9999;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         ">
-            <a href="https://t.me/matmehurfu" 
-               target="_blank" 
+            <a href="https://t.me/matmehurfu"
+               target="_blank"
                style="
                    text-decoration: none;
                    color: #0088cc;
@@ -90,8 +84,8 @@ BANNERS = {
     },
     "default": {
         "html": """
-            <a 
-               target="_blank" 
+            <a
+               target="_blank"
                style="
                    text-decoration: none;
                    color: #000000;

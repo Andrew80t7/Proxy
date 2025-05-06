@@ -78,9 +78,8 @@ def proxy():
     content_type = resp.headers.get("Content-Type", "")
 
     if "text/html" in content_type.lower():
-
         # Если HTML — очищаем от рекламы и переписываем ссылки
-        cleaned_html_bytes, blocked_elements = modify_html(resp.content, url)
+        cleaned_html_bytes, blocked_elements = modify_html(resp.content)
         cleaned_html = cleaned_html_bytes.decode("utf-8", errors="ignore")
 
         final_html = rewrite_links(

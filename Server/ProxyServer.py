@@ -21,7 +21,7 @@ AD_HOSTS_1 = set()
 logger = get_logger()
 
 
-def modify_html(html: bytes, url: str) -> Tuple[bytes, List[dict]]:
+def modify_html(html: bytes) -> Tuple[bytes, List[dict]]:
     """
     удаляет рекламу
     """
@@ -159,24 +159,24 @@ def parse_request(data: bytes):
 
     if method == "CONNECT":
         host_port = parts[1].split(":")
-        host = host_port[0]
+        HOST = host_port[0]
         port = int(host_port[1]) if len(host_port) > 1 else 443
-        return "CONNECT", host, port
+        return "CONNECT", HOST, port
     else:
         # Обработка заголовков
-        for line in lines[1:]:
+        for tag_line in lines[1:]:
             try:
                 # Декодируем каждую строку заголовка
-                line_str = line.decode("utf-8", errors="ignore")
+                line_str = tag_line.decode("utf-8", errors="ignore")
                 if line_str.lower().startswith("host:"):
                     host_port = line_str.split(":", 1)[1].strip()
                     if ":" in host_port:
-                        host, port = host_port.split(":")
+                        HOST, port = host_port.split(":")
                         port = int(port)
                     else:
-                        host = host_port
+                        HOST = host_port
                         port = 80
-                    return method, host, port
+                    return method, HOST, port
             except Exception as e:
                 print(f"Ошибка при обработке заголовка: {e}")
         return None, None, None
@@ -312,21 +312,21 @@ class ProxyServer:
             save_dump(data, "request")
 
             if s in self.channel and self.channel[s]["parse"]:
-                method, host, port = parse_request(data)
+                method, HOST, port = parse_request(data)
 
-                if method == "CONNECT" and host and is_ad_host(host):
-                    logger.info(f"BLOCKING CONNECT to ad host: {host}")
+                if method == "CONNECT" and HOST and is_ad_host(HOST):
+                    logger.info(f"BLOCKING CONNECT to ad host: {HOST}")
                     s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
                     return
 
-                if host and is_ad_host(host):
+                if HOST and is_ad_host(HOST):
                     # Увеличиваем счётчик заблокированных запросов
                     self.channel[s].setdefault("blocked_count", 0)
                     self.channel[s]["blocked_count"] += 1
 
                     logger.info(
-                        f"Блокировка запроса к рекламному домену: {host} (total blocked: {self.channel[s]['blocked_count']})"
-                    )
+                        f"Блокировка запроса к рекламному домену: {HOST} (total blocked: {
+                            self.channel[s]['blocked_count']})")
                     if method == "CONNECT":
                         # Блокируем HTTPS CONNECT
                         s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
@@ -337,15 +337,15 @@ class ProxyServer:
                         save_dump(resp, "blocked")
                     return
 
-                if method and host and port:
-                    logger.debug(f"Запрос: {method} {host}:{port}")
-                    forward = Forward().start(host, port)
+                if method and HOST and port:
+                    logger.debug(f"Запрос: {method} {HOST}:{port}")
+                    forward = Forward().start(HOST, port)
                     if forward:
                         self._setup_forward_connection(
                             s, forward, method, data
                         )
                     else:
-                        self._handle_connection_error(host, port, s)
+                        self._handle_connection_error(HOST, port, s)
                 else:
                     self._handle_invalid_request(s)
 
@@ -426,11 +426,11 @@ class ProxyServer:
             logger.error(f"Ошибка при обработке HTTP-соединения: {e}")
             self.on_close(s)
 
-    def _handle_connection_error(self, host: str, port: int, s: socket.socket):
+    def _handle_connection_error(self, HOST: str, PORT: int, s: socket.socket):
         """
         Обрабатывает ошибку подключения.
         """
-        logger.error(f"Не удалось подключиться к {host}:{port}")
+        logger.error(f"Не удалось подключиться к {HOST}:{PORT}")
         self.on_close(s)
 
     def _handle_invalid_request(self, s: socket.socket):
