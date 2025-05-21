@@ -12,10 +12,10 @@ import Server.ProxyServer as ps
 def test_is_ad_host(tmp_path, monkeypatch):
     # Поменяем AD_HOSTS_1
     ps.AD_HOSTS_1.clear()
-    ps.AD_HOSTS_1.add("ads.test.com")
-    assert ps.is_ad_host("ads.test.com")
-    assert ps.is_ad_host("sub.ads.test.com")
-    assert not ps.is_ad_host("notads.test.com")
+    ps.AD_HOSTS_1.add("ads.tests.com")
+    assert ps.is_ad_host("ads.tests.com")
+    assert ps.is_ad_host("sub.ads.tests.com")
+    assert not ps.is_ad_host("notads.tests.com")
 
 
 def test_save_dump_creates_file(tmp_path, monkeypatch):

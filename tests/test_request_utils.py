@@ -24,7 +24,7 @@ def test_parse_request_connect():
 
 
 def test_parse_request_missing_host_header():
-    raw = b"GET /nohost HTTP/1.1\r\nUser-Agent: test\r\n\r\n"
+    raw = b"GET /nohost HTTP/1.1\r\nUser-Agent: tests\r\n\r\n"
     method, host, port = parse_request(raw)
     assert method is None and host is None and port is None
 
