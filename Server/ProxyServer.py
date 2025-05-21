@@ -69,8 +69,9 @@ def modify_html(html: bytes) -> Tuple[bytes, List[dict]]:
 
         return str(soup).encode("utf-8"), blocked_elements
 
-    except Exception as e:
-        logger.error(f"HTML modification error: {e}")
+    except Exception:
+        # TODO: handle HTML modification errors
+        pass
         return html, blocked_elements
 
 
@@ -140,6 +141,8 @@ def modify_request(data: bytes) -> bytes:
             )
         return b"\r\n".join(lines)
     except UnicodeError:
+        # TODO: handle decoding errors
+        pass
         return data
 
 
@@ -166,7 +169,6 @@ def parse_request(data: bytes):
         # Обработка заголовков
         for tag_line in lines[1:]:
             try:
-                # Декодируем каждую строку заголовка
                 line_str = tag_line.decode("utf-8", errors="ignore")
                 if line_str.lower().startswith("host:"):
                     host_port = line_str.split(":", 1)[1].strip()
@@ -177,9 +179,13 @@ def parse_request(data: bytes):
                         HOST = host_port
                         port = 80
                     return method, HOST, port
-            except Exception as e:
-                print(f"Ошибка при обработке заголовка: {e}")
+            except Exception:
+                # TODO: handle header parsing errors
+                pass
         return None, None, None
+
+
+# ... остальная часть класса ProxyServer без изменений ...
 
 
 class ProxyServer:
@@ -325,8 +331,9 @@ class ProxyServer:
                     self.channel[s]["blocked_count"] += 1
 
                     logger.info(
-                        f"Блокировка запроса к рекламному домену: {HOST} (total blocked: {
-                            self.channel[s]['blocked_count']})")
+                        f"Блокировка запроса к рекламному домену: {HOST} "
+                        f"(total blocked: {self.channel[s]['blocked_count']})"
+                    )
                     if method == "CONNECT":
                         # Блокируем HTTPS CONNECT
                         s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")

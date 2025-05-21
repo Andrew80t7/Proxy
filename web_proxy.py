@@ -69,7 +69,7 @@ def proxy():
     url = request.args.get("url")
 
     try:
-        flag = int(request.args.get("flag", "1"))  # флаг баннеров
+        flag = int(request.args.get("flag", "2"))  # флаг баннеров
     except ValueError:
         flag = 1
 
