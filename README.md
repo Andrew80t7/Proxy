@@ -78,7 +78,11 @@ pip install -r requirements.txt
 Запустите юнит-тесты:
 
 ```bash
-pytest tests/test_proxy.py
+pytest test/test_dump_and_hosts.py
+pytest test/test_factorial.py
+pytest test/test_html_utils.py
+pytest test/test_request_utils.py
+pytest test/test_web_proxy.py
 ```
 
 Они покрывают:
