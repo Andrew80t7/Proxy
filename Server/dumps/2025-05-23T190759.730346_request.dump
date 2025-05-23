@@ -1,6 +1,0 @@
-Timestamp: 2025-05-23T190759.730346
-Direction: request
-
-CONNECT example.com:443 HTTP/1.1
-Host: example.com:443
-

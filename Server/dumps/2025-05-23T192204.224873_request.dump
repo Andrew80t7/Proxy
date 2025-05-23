@@ -1,8 +1,0 @@
-Timestamp: 2025-05-23T192204.224873
-Direction: request
-
-CONNECT api.browser.yandex.net:443 HTTP/1.1
-Host: api.browser.yandex.net:443
-Proxy-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36
-

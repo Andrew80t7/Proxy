@@ -128,7 +128,8 @@ if __name__ == "__main__":
         "http://www.realto.ru/journal/articles/interesnye-fakty-o-kazino/"
     )
     webbrowser.open(
-        f"http://127.0.0.1:5000/?url={urllib.parse.quote_plus(start_url)}&embed_ads=1"
+        f"http://127.0.0.1:5000/?url={urllib.parse.quote_plus(start_url)}"
+        f"&embed_ads=1"
     )
 
     try:
