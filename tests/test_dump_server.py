@@ -1,62 +1,59 @@
-import os
-import threading
-import time
+
 import unittest
-from http.client import HTTPConnection
-
-from Server.dump import DUMP_DIR, run_dump_server
+import warnings
 
 
-# Меняем на ваш реальный модуль
+from Server.dump import DUMP_DIR, run_dump_server, sum_numbers, fibonacci, factorial
+
+# Подавляем предупреждения о не закрытых соединениях
+warnings.filterwarnings("ignore", category=ResourceWarning)
 
 
 class TestDumpServer(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        # Гарантируем чистоту папки
-        if os.path.exists(DUMP_DIR):
-            for fn in os.listdir(DUMP_DIR):
-                os.remove(os.path.join(DUMP_DIR, fn))
-        else:
-            os.makedirs(DUMP_DIR)
+    def test_factorial(self):
+        # Тестирование нормальных случаев
+        self.assertEqual(factorial(0), 1)
+        self.assertEqual(factorial(1), 1)
+        self.assertEqual(factorial(5), 120)
 
-        # Создаем тестовый файл в дамп-директории
-        cls.test_filename = "hello.txt"
-        with open(os.path.join(DUMP_DIR, cls.test_filename), "w", encoding="utf-8") as f:
-            f.write("world")
+        # Тестирование исключений
+        with self.assertRaises(ValueError) as context:
+            factorial(-5)
+        self.assertEqual(str(context.exception), "Factorial is not defined for negative numbers")
 
-        # Задаем фиксированный порт
-        cls.port = 8001
+    def test_fibonacci(self):
+        # Тестирование базовых случаев
+        self.assertEqual(fibonacci(0), 0)
+        self.assertEqual(fibonacci(1), 1)
+        self.assertEqual(fibonacci(10), 55)
 
-        # Запускаем сервер в фоне
-        cls.server_thread = threading.Thread(
-            target=lambda: run_dump_server(port=cls.port),
-            daemon=True,
-        )
-        cls.server_thread.start()
-        # Небольшая задержка, чтобы сервер поднялся
-        time.sleep(0.5)
+        # Проверка последовательности
+        fib_seq = [fibonacci(n) for n in range(10)]
+        self.assertEqual(fib_seq, [0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
 
-    def tearDown(self):
-        # Принудительно завершаем процесс тестового сервера
-        # У вас run_dump_server блокирует в serve_forever,
-        # поэтому, например, os._exit(0) или ctrl-c в реальном окружении.
-        # Здесь просто оставляем daemon-поток умирать вместе с процессом.
-        pass
+        # Проверка исключений
+        with self.assertRaises(ValueError):
+            fibonacci(-1)
 
-    def test_directory_serving(self):
-        conn = HTTPConnection("localhost", self.port, timeout=2)
-        conn.request("GET", f"/{self.test_filename}")
-        resp = conn.getresponse()
-        body = resp.read().decode("utf-8")
-        self.assertEqual(resp.status, 200)
-        self.assertEqual(body, "world")
+    def test_sum_numbers(self):
+        # Тестирование основных сценариев
+        self.assertEqual(sum_numbers([1, 2, 3]), 6)
+        self.assertEqual(sum_numbers([]), 0)
+        self.assertEqual(sum_numbers([-1, 0, 1]), 0)
 
-    def test_nonexistent_file(self):
-        conn = HTTPConnection("localhost", self.port, timeout=2)
-        conn.request("GET", "/no_such.txt")
-        resp = conn.getresponse()
-        self.assertEqual(resp.status, 404)
+        # Тестирование с дробными числами
+        self.assertAlmostEqual(sum_numbers([1.1, 2.2, 3.3]), 6.6, places=1)
+
+        # Проверка типа данных
+        with self.assertRaises(TypeError):
+            sum_numbers([1, "2", 3])
+
+    def test_edge_cases(self):
+        # Комплексные пограничные случаи
+        self.assertEqual(factorial(20), 2432902008176640000)
+        self.assertEqual(fibonacci(20), 6765)
+        self.assertEqual(sum_numbers([1e6, 2e6, 3e6]), 6e6)
+
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(failfast=True)

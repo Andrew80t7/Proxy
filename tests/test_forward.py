@@ -58,9 +58,11 @@ class TestForward(unittest.TestCase):
 
     def test_timeout(self):
         f = Forward()
-        f.timeout = 0.01  # минимальный таймаут для соединения
+        f.timeout = 0.01
         # Используем IP, который не отвечает (через тестовую сеть)
-        result = f.start("10.255.255.1", 65000)
+        result = f.start(
+            "10.255.255.1",
+            65000)
         self.assertIsNone(
             result,
             "Ожидалось None при невозможности установить соединение в срок"

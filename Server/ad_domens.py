@@ -1,22 +1,50 @@
+# ad_domains.py
 import re
+from typing import Set
 
-input_path = "../easylist.txt"
-output_path = "ad_hosts.txt"
 
-domains = set()
-pattern = re.compile(r"^([^#|/$@:\s]+)")
+def extract_domains(input_lines: list) -> Set[str]:
+    """Извлекает домены из списка строк по правилам EasyList."""
+    pattern = re.compile(r"^([^#|/$@:\s]+)")
+    domains = set()
 
-with open(input_path, "r", encoding="utf-8") as fin:
-    for line in fin:
+    for line in input_lines:
         line = line.strip()
         if not line or line.startswith("!"):
             continue
-        m = pattern.match(line)
-        if m:
-            domains.add(m.group(1).lower())
+        match = pattern.match(line)
+        if match:
+            domains.add(match.group(1).lower())
 
-with open(output_path, "w", encoding="utf-8") as fout:
-    for host in sorted(domains):
-        fout.write(host + "\n")
+    return domains
 
-print(f"Сохранено {len(domains)} доменов в {output_path}")
+
+def save_domains(domains: Set[str], output_file: str) -> int:
+    """Сохраняет отсортированный список доменов в файл."""
+    try:
+        with open(output_file, "w", encoding="utf-8") as f:
+            for domain in sorted(domains):
+                f.write(f"{domain}\n")
+        return len(domains)
+    except IOError as e:
+        raise RuntimeError(f"Ошибка записи файла: {e}")
+
+
+def process_adblock_list(input_file: str, output_file: str) -> None:
+    """Основная функция обработки файла."""
+    try:
+        with open(input_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+
+        domains = extract_domains(lines)
+        count = save_domains(domains, output_file)
+        print(f"Сохранено {count} доменов в {output_file}")
+
+    except FileNotFoundError:
+        raise RuntimeError("Входной файл не найден")
+    except UnicodeDecodeError:
+        raise RuntimeError("Ошибка декодирования файла")
+
+
+if __name__ == "__main__":
+    process_adblock_list("../easylist.txt", "ad_hosts.txt")
