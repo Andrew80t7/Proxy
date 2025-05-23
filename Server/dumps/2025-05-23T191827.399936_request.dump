@@ -1,0 +1,10 @@
+Timestamp: 2025-05-23T191827.399936
+Direction: request
+
+GET http://localhost:8080/ HTTP/1.1
+Host: localhost:8080
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+

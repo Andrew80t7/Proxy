@@ -1,0 +1,360 @@
+2025-05-23 19:03:50 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:03:50 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:03:52 - ProxyServer - INFO - Тестовое окружение настроено
+2025-05-23 19:03:52 - ProxyServer - INFO - Запуск теста таймаута соединения
+2025-05-23 19:03:53 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51315)
+2025-05-23 19:03:53 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190353.347769_request.dump
+2025-05-23 19:03:53 - ProxyServer - DEBUG - Запрос: GET 10.0.0.1:80
+2025-05-23 19:03:53 - ProxyServer - DEBUG - Попытка подключения к 10.0.0.1:80
+2025-05-23 19:03:53 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:03:54 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51315)
+2025-05-23 19:03:54 - ProxyServer - INFO - Тест таймаута соединения успешно пройден
+2025-05-23 19:03:56 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51317)
+2025-05-23 19:03:56 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190356.391430_request.dump
+2025-05-23 19:03:56 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:03:56 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:03:56 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:04:11 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51317)
+2025-05-23 19:04:13 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51336)
+2025-05-23 19:04:13 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190413.438140_request.dump
+2025-05-23 19:04:13 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:04:13 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:04:13 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:04:28 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51336)
+2025-05-23 19:04:30 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51338)
+2025-05-23 19:04:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190430.494091_request.dump
+2025-05-23 19:04:30 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:04:30 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:04:30 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:04:45 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51338)
+2025-05-23 19:04:47 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51347)
+2025-05-23 19:04:47 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190447.753925_request.dump
+2025-05-23 19:04:47 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:04:47 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:04:47 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:04:50 - ProxyServer - INFO - Очищено 2 активных соединений
+2025-05-23 19:05:02 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51347)
+2025-05-23 19:05:04 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51349)
+2025-05-23 19:05:04 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190504.810948_request.dump
+2025-05-23 19:05:04 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:05:04 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:05:04 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:05:19 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51349)
+2025-05-23 19:05:21 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51361)
+2025-05-23 19:05:21 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190521.878571_request.dump
+2025-05-23 19:05:21 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:05:21 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:05:21 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:05:37 - ProxyServer - INFO - Завершение работы тестового сервера
+2025-05-23 19:05:37 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:05:37 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51361)
+2025-05-23 19:05:37 - ProxyServer - WARNING - Получен запрос от невалидного сокета
+2025-05-23 19:05:37 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:05:37 - ProxyServer - INFO - Тестовое окружение очищено
+2025-05-23 19:05:39 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:05:39 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:05:41 - ProxyServer - INFO - Тестовое окружение настроено
+2025-05-23 19:05:41 - ProxyServer - INFO - Запуск теста таймаута соединения
+2025-05-23 19:05:42 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51368)
+2025-05-23 19:05:42 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190542.806787_request.dump
+2025-05-23 19:05:42 - ProxyServer - DEBUG - Запрос: GET 10.0.0.1:80
+2025-05-23 19:05:42 - ProxyServer - DEBUG - Попытка подключения к 10.0.0.1:80
+2025-05-23 19:05:42 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:05:43 - ProxyServer - INFO - Тест таймаута соединения успешно пройден
+2025-05-23 19:05:43 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51368)
+2025-05-23 19:05:45 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51372)
+2025-05-23 19:05:45 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190545.858568_request.dump
+2025-05-23 19:05:45 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:05:45 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:05:45 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:00 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51372)
+2025-05-23 19:06:02 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51375)
+2025-05-23 19:06:02 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190602.892678_request.dump
+2025-05-23 19:06:02 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:06:02 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:06:02 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:28 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:06:28 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:06:30 - ProxyServer - INFO - Тестовое окружение настроено
+2025-05-23 19:06:30 - ProxyServer - INFO - Запуск теста таймаута соединения
+2025-05-23 19:06:31 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51382)
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190631.333042_request.dump
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Запрос: GET 10.0.0.1:80
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Попытка подключения к 10.0.0.1:80
+2025-05-23 19:06:31 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:31 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51383)
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190631.844919_request.dump
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Запрос: CONNECT self.events.data.microsoft.com:443
+2025-05-23 19:06:31 - ProxyServer - DEBUG - Попытка подключения к self.events.data.microsoft.com:443
+2025-05-23 19:06:31 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:32 - ProxyServer - INFO - Тест таймаута соединения успешно пройден
+2025-05-23 19:06:32 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51382)
+2025-05-23 19:06:33 - ProxyServer - ERROR - Ошибка при получении данных: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2025-05-23 19:06:33 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51383)
+2025-05-23 19:06:34 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51385)
+2025-05-23 19:06:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190634.380256_request.dump
+2025-05-23 19:06:34 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:06:34 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:06:34 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:49 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51385)
+2025-05-23 19:06:51 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51391)
+2025-05-23 19:06:51 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190651.405046_request.dump
+2025-05-23 19:06:51 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:06:51 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:06:51 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:06:53 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51392)
+2025-05-23 19:06:53 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190653.197322_request.dump
+2025-05-23 19:06:53 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.net:443
+2025-05-23 19:06:53 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.net:443
+2025-05-23 19:06:53 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:06 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51391)
+2025-05-23 19:07:08 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51394)
+2025-05-23 19:07:08 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190708.449924_request.dump
+2025-05-23 19:07:08 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:07:08 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:07:08 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:10 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 51395)
+2025-05-23 19:07:10 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190710.599601_request.dump
+2025-05-23 19:07:10 - ProxyServer - DEBUG - Запрос: CONNECT edge.microsoft.com:443
+2025-05-23 19:07:10 - ProxyServer - DEBUG - Попытка подключения к edge.microsoft.com:443
+2025-05-23 19:07:10 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:14 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64500)
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190714.212267_request.dump
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Запрос: GET www.msftconnecttest.com:80
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Попытка подключения к www.msftconnecttest.com:80
+2025-05-23 19:07:14 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:14 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64503)
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190714.219519_request.dump
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Запрос: GET ipv6.msftconnecttest.com:80
+2025-05-23 19:07:14 - ProxyServer - DEBUG - Попытка подключения к ipv6.msftconnecttest.com:80
+2025-05-23 19:07:14 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:20 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64524)
+2025-05-23 19:07:20 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190720.079349_request.dump
+2025-05-23 19:07:20 - ProxyServer - DEBUG - Запрос: CONNECT ecs.office.com:443
+2025-05-23 19:07:20 - ProxyServer - DEBUG - Попытка подключения к ecs.office.com:443
+2025-05-23 19:07:20 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:23 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51392)
+2025-05-23 19:07:23 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51394)
+2025-05-23 19:07:25 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64526)
+2025-05-23 19:07:25 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190725.649408_request.dump
+2025-05-23 19:07:25 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:07:25 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:07:25 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:28 - ProxyServer - INFO - Очищено 6 активных соединений
+2025-05-23 19:07:40 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 51395)
+2025-05-23 19:07:40 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64526)
+2025-05-23 19:07:42 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64558)
+2025-05-23 19:07:42 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190742.686009_request.dump
+2025-05-23 19:07:42 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:07:42 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:07:42 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:07:49 - ProxyServer - ERROR - Ошибка при получении данных: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2025-05-23 19:07:49 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64500)
+2025-05-23 19:07:49 - ProxyServer - ERROR - Ошибка при получении данных: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2025-05-23 19:07:49 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64503)
+2025-05-23 19:07:52 - ProxyServer - ERROR - Ошибка при получении данных: [WinError 10054] Удаленный хост принудительно разорвал существующее подключение
+2025-05-23 19:07:52 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64524)
+2025-05-23 19:07:57 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64558)
+2025-05-23 19:07:59 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64561)
+2025-05-23 19:07:59 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190759.730346_request.dump
+2025-05-23 19:07:59 - ProxyServer - DEBUG - Запрос: CONNECT example.com:443
+2025-05-23 19:07:59 - ProxyServer - DEBUG - Попытка подключения к example.com:443
+2025-05-23 19:07:59 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:08:02 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64562)
+2025-05-23 19:08:02 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190802.094997_request.dump
+2025-05-23 19:08:02 - ProxyServer - DEBUG - Запрос: CONNECT ecs.office.com:443
+2025-05-23 19:08:02 - ProxyServer - DEBUG - Попытка подключения к ecs.office.com:443
+2025-05-23 19:08:02 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:08:14 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64561)
+2025-05-23 19:08:14 - ProxyServer - INFO - Запуск теста несуществующего хоста
+2025-05-23 19:08:16 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64565)
+2025-05-23 19:08:16 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T190816.788305_request.dump
+2025-05-23 19:08:16 - ProxyServer - DEBUG - Запрос: GET invalid-host-that-does-not-exist.com:80
+2025-05-23 19:08:16 - ProxyServer - DEBUG - Попытка подключения к invalid-host-that-does-not-exist.com:80
+2025-05-23 19:08:16 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:08:21 - ProxyServer - INFO - Тест несуществующего хоста успешно пройден
+2025-05-23 19:08:21 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64565)
+2025-05-23 19:08:21 - ProxyServer - INFO - Завершение работы тестового сервера
+2025-05-23 19:08:21 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:08:21 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64562)
+2025-05-23 19:08:21 - ProxyServer - WARNING - Получен запрос от невалидного сокета
+2025-05-23 19:08:21 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:08:21 - ProxyServer - INFO - Тестовое окружение очищено
+2025-05-23 19:15:31 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:15:31 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:15:35 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64855)
+2025-05-23 19:15:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191535.190959_request.dump
+2025-05-23 19:15:35 - ProxyServer - INFO - Блокировка запроса к рекламному домену: ads.example.com (total blocked: 1)
+2025-05-23 19:15:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191535.192775_blocked.dump
+2025-05-23 19:15:35 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64855)
+2025-05-23 19:15:37 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64857)
+2025-05-23 19:15:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191537.245604_request.dump
+2025-05-23 19:15:37 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:15:37 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:15:37 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:15:47 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64857)
+2025-05-23 19:15:47 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:15:47 - ProxyServer - ERROR - Ошибка при принятии соединения: [WinError 10038] Сделана попытка выполнить операцию на объекте, не являющемся сокетом
+2025-05-23 19:15:47 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:18:20 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:18:20 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:18:20 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64996)
+2025-05-23 19:18:20 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191820.290216_request.dump
+2025-05-23 19:18:20 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:20 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:20 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:20 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64996)
+2025-05-23 19:18:20 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64997)
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191821.000066_request.dump
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:21 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:21 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64997)
+2025-05-23 19:18:21 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64998)
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191821.718655_request.dump
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:21 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:21 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:22 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64998)
+2025-05-23 19:18:22 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 64999)
+2025-05-23 19:18:22 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191822.425179_request.dump
+2025-05-23 19:18:22 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:22 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:22 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:22 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 64999)
+2025-05-23 19:18:23 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65000)
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191823.135580_request.dump
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:23 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:23 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65000)
+2025-05-23 19:18:23 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65001)
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191823.845426_request.dump
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:23 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:23 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:24 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65001)
+2025-05-23 19:18:24 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65002)
+2025-05-23 19:18:24 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191824.555415_request.dump
+2025-05-23 19:18:24 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:24 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:24 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:25 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65002)
+2025-05-23 19:18:25 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65003)
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191825.263256_request.dump
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:25 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:25 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65003)
+2025-05-23 19:18:25 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65004)
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191825.977487_request.dump
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:25 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:25 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:26 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65004)
+2025-05-23 19:18:26 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65005)
+2025-05-23 19:18:26 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191826.694562_request.dump
+2025-05-23 19:18:26 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:26 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:26 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:27 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65005)
+2025-05-23 19:18:27 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65006)
+2025-05-23 19:18:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191827.399936_request.dump
+2025-05-23 19:18:27 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:27 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:27 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:27 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65006)
+2025-05-23 19:18:28 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65007)
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191828.108344_request.dump
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:28 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:28 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65007)
+2025-05-23 19:18:28 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65014)
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191828.812281_request.dump
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:28 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:28 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:29 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65014)
+2025-05-23 19:18:29 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65015)
+2025-05-23 19:18:29 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191829.518525_request.dump
+2025-05-23 19:18:29 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:29 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:29 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:30 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65015)
+2025-05-23 19:18:30 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65016)
+2025-05-23 19:18:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T191830.233223_request.dump
+2025-05-23 19:18:30 - ProxyServer - DEBUG - Запрос: GET localhost:8080
+2025-05-23 19:18:30 - ProxyServer - DEBUG - Попытка подключения к localhost:8080
+2025-05-23 19:18:30 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:18:30 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65016)
+2025-05-23 19:19:20 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:20:20 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:21:20 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:22:04 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65121)
+2025-05-23 19:22:04 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T192204.224873_request.dump
+2025-05-23 19:22:04 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.net:443
+2025-05-23 19:22:04 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.net:443
+2025-05-23 19:22:04 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:22:20 - ProxyServer - INFO - Очищено 2 активных соединений
+2025-05-23 19:22:34 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65121)
+2025-05-23 19:23:20 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:24:23 - ProxyServer - INFO - Прокси-сервер инициализирован на localhost:8080
+2025-05-23 19:26:13 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:8888
+2025-05-23 19:26:13 - ProxyServer - INFO - Сервер запущен и ожидает подключений
+2025-05-23 19:26:14 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65300)
+2025-05-23 19:26:14 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T192614.584824_request.dump
+2025-05-23 19:26:14 - ProxyServer - DEBUG - Запрос: GET no-such-host.invalid:80
+2025-05-23 19:26:14 - ProxyServer - DEBUG - Попытка подключения к no-such-host.invalid:80
+2025-05-23 19:26:14 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:26:15 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65300)
+2025-05-23 19:26:15 - ProxyServer - INFO - Новое подключение от ('127.0.0.1', 65301)
+2025-05-23 19:26:15 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-23T192615.615868_request.dump
+2025-05-23 19:26:15 - ProxyServer - DEBUG - Запрос: GET example.com:80
+2025-05-23 19:26:15 - ProxyServer - DEBUG - Попытка подключения к example.com:80
+2025-05-23 19:26:15 - ProxyServer - ERROR - Ошибка в главном цикле: catching classes that do not inherit from BaseException is not allowed
+2025-05-23 19:26:20 - ProxyServer - INFO - Закрытие соединения с ('127.0.0.1', 65301)
+2025-05-23 19:26:20 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:26:20 - ProxyServer - ERROR - Ошибка при принятии соединения: [WinError 10038] Сделана попытка выполнить операцию на объекте, не являющемся сокетом
+2025-05-23 19:26:20 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:36:50 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:36:50 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:36:50 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:36:50 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:36:50 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:36:50 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:36:50 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:36:50 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:36:50 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:36:50 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:36:50 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:36:50 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:36:50 - ProxyServer - DEBUG - Dump сохранён: C:\Users\73B5~1\AppData\Local\Temp\tmpouftuegm\2025-05-23T193650.363563_req.dump
+2025-05-23 19:38:05 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:05 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:38:05 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:05 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:05 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:05 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:05 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:05 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:05 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:05 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:05 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-23 19:38:05 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:05 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:05 - ProxyServer - DEBUG - Dump сохранён: C:\Users\73B5~1\AppData\Local\Temp\tmpcu29ah3w\2025-05-23T193805.797871_req.dump
+2025-05-23 19:38:21 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:21 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-23 19:38:21 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:21 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:21 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:21 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:21 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:21 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:21 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:21 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-23 19:38:21 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-23 19:38:21 - ProxyServer - INFO - Завершение работы сервера
+2025-05-23 19:38:21 - ProxyServer - INFO - Сервер остановлен
+2025-05-23 19:38:21 - ProxyServer - DEBUG - Dump сохранён: C:\Users\73B5~1\AppData\Local\Temp\tmpkqbibtua\2025-05-23T193821.686456_req.dump

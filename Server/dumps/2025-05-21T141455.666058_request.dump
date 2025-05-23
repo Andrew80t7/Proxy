@@ -1,0 +1,10 @@
+Timestamp: 2025-05-21T141455.666058
+Direction: request
+
+GET http://invalid-host-that-does-not-exist.com/ HTTP/1.1
+Host: invalid-host-that-does-not-exist.com
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+

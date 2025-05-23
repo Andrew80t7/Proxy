@@ -1,0 +1,9 @@
+Timestamp: 2025-05-21T141522.162292
+Direction: request
+
+CONNECT self.events.data.microsoft.com:443 HTTP/1.0
+Host: self.events.data.microsoft.com:443
+Content-Length: 0
+Proxy-Connection: Keep-Alive
+Pragma: no-cache
+

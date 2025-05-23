@@ -1,0 +1,10 @@
+Timestamp: 2025-05-23T190542.806787
+Direction: request
+
+GET http://10.0.0.1/ HTTP/1.1
+Host: 10.0.0.1
+User-Agent: python-requests/2.31.0
+Accept-Encoding: gzip, deflate, br, zstd
+Accept: */*
+Connection: keep-alive
+
