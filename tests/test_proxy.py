@@ -7,7 +7,17 @@ from Server.ProxyServer import (ProxyServer,
                                 reverse_string,
                                 AD_HOSTS_1,
                                 is_ad_host,
-                                modify_html)
+                                modify_html,
+                                time_to_seconds,
+                                is_prime_v2,
+                                circle_area,
+                                is_pangram,
+                                count_words,
+                                find_max,
+                                is_leap_year,
+                                km_to_miles,
+                                sum_list,
+                                is_even)
 
 
 class DummySocket:
@@ -150,14 +160,91 @@ class TestProxyServer(unittest.TestCase):
         # Заменяем и в input_list
         self.srv.input_list[0] = fake
         self.srv.server = fake
-
-        # Теперь при вызове on_accept() не должно б
         try:
             self.srv.on_accept()
         except Exception as e:
             self.fail(f"on_accept() "
                       f"не должна выбрасывать,"
                       f" но выбросила: {e}")
+
+
+class TestNewFunctions(unittest.TestCase):
+
+    def test_is_even(self):
+        self.assertTrue(is_even(0))
+        self.assertTrue(is_even(-4))
+        self.assertFalse(is_even(3))
+        self.assertFalse(is_even(9999999))
+
+    def test_sum_list(self):
+        self.assertEqual(sum_list([1, 2, 3]), 6)
+        self.assertEqual(sum_list([]), 0)
+        self.assertAlmostEqual(sum_list([1.5, 2.5]), 4.0)
+        self.assertEqual(sum_list([-10, 5]), -5)
+
+    def test_km_to_miles(self):
+        self.assertAlmostEqual(km_to_miles(1),
+                               0.621371)
+        self.assertAlmostEqual(km_to_miles(0),
+                               0.0)
+        self.assertAlmostEqual(km_to_miles(100),
+                               62.1371)
+
+    def test_is_leap_year(self):
+        self.assertTrue(is_leap_year(2000))
+        self.assertTrue(is_leap_year(2020))
+        self.assertFalse(is_leap_year(1900))
+        self.assertFalse(is_leap_year(2021))
+        self.assertTrue(is_leap_year(2012))
+
+    def test_find_max(self):
+        self.assertEqual(find_max([3, 1, 4, 2]), 4)
+        self.assertEqual(find_max([-5, -1, -10]), -1)
+        self.assertIsNone(find_max([]))
+        self.assertEqual(find_max([5.5, 3.3]), 5.5)
+
+    def test_count_words(self):
+        self.assertEqual(count_words("Hello world"), 2)
+        self.assertEqual(count_words(""), 0)
+        self.assertEqual(count_words("   Multiple   spaces   "), 2)
+        self.assertEqual(count_words("No-spaces-here"), 1)
+
+    def test_is_pangram(self):
+        self.assertTrue(is_pangram("The quick brown"
+                                   " fox jumps over the lazy dog"))
+        self.assertFalse(is_pangram("Hello world"))
+        self.assertTrue(is_pangram("Pack my box with"
+                                   " five dozen liquor jugs"))
+        self.assertFalse(is_pangram(""))
+
+    def test_circle_area(self):
+        self.assertAlmostEqual(circle_area(1),
+                               3.14159,
+                               places=4)
+        self.assertAlmostEqual(circle_area(2.5),
+                               19.6349375,
+                               places=4)
+        with self.assertRaises(ValueError):
+            circle_area(-5)
+
+    def test_time_to_seconds(self):
+        self.assertEqual(time_to_seconds(1, 30),
+                         5400)
+        self.assertEqual(time_to_seconds(0, 45),
+                         2700)
+        self.assertEqual(time_to_seconds(2, 0),
+                         7200)
+        with self.assertRaises(ValueError):
+            time_to_seconds(-1, 10)
+        with self.assertRaises(ValueError):
+            time_to_seconds(2, -5)
+
+    def test_is_prime_v2(self):
+        self.assertTrue(is_prime_v2(2))
+        self.assertTrue(is_prime_v2(7919))
+        self.assertFalse(is_prime_v2(1))
+        self.assertFalse(is_prime_v2(4))
+        self.assertFalse(is_prime_v2(-5))
 
 
 if __name__ == "__main__":

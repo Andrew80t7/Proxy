@@ -21,6 +21,71 @@ AD_HOSTS_1 = set()
 logger = get_logger()
 
 
+def is_even(n: int) -> bool:
+    """Проверяет чётность числа"""
+    return n % 2 == 0
+
+
+def sum_list(numbers: list) -> float:
+    """Возвращает сумму элементов списка"""
+    return sum(numbers)
+
+
+def km_to_miles(km: float) -> float:
+    """Конвертирует километры в мили"""
+    return km * 0.621371
+
+
+def is_leap_year(year: int) -> bool:
+    """Проверяет високосный год"""
+    if year % 4 != 0:
+        return False
+    elif year % 100 != 0:
+        return True
+    elif year % 400 == 0:
+        return True
+    else:
+        return False
+
+
+def find_max(numbers: list) -> float:
+    """Находит максимальное число в списке"""
+    return max(numbers) if numbers else None
+
+
+def count_words(text: str) -> int:
+    """Считает количество слов в строке"""
+    return len(text.split())
+
+
+def is_pangram(s: str) -> bool:
+    """Проверяет панграмму (содержит все буквы алфавита)"""
+    alphabet = set('abcdefghijklmnopqrstuvwxyz')
+    return alphabet.issubset(s.lower())
+
+
+def circle_area(radius: float) -> float:
+    """Вычисляет площадь круга"""
+    if radius < 0:
+        raise ValueError("Радиус не может быть отрицательным")
+    return 3.14159 * radius ** 2
+
+
+def time_to_seconds(hours: int, minutes: int) -> int:
+    """Конвертирует часы и минуты в секунды"""
+    if hours < 0 or minutes < 0:
+        raise ValueError("Время не может быть отрицательным")
+    return hours * 3600 + minutes * 60
+
+
+def is_prime_v2(n: int) -> bool:
+    """Альтернативная проверка простого числа"""
+    if n <= 1:
+        return False
+    return all(n % i != 0 for i in range(2,
+                                         int(n ** 0.5) + 1))
+
+
 def factorial(n: int) -> int:
     if n < 0:
         raise ValueError("Negative input not allowed")
