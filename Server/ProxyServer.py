@@ -172,7 +172,13 @@ def is_anagram(s1: str, s2: str) -> bool:
 
 # 22. Конвертация римских чисел в арабские
 def roman_to_int(roman: str) -> int:
-    roman_numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    roman_numerals = {'I': 1,
+                      'V': 5,
+                      'X': 10,
+                      'L': 50,
+                      'C': 100,
+                      'D': 500,
+                      'M': 1000}
     total = 0
     prev_value = 0
     for char in reversed(roman):
@@ -220,7 +226,6 @@ def is_power_of_two(n: int) -> bool:
     return n > 0 and (n & (n - 1)) == 0
 
 
-# 29. Конвертация градусов в радианы
 def degrees_to_radians(degrees: float) -> float:
     return degrees * math.pi / 180
 
@@ -237,7 +242,8 @@ def find_median(numbers: List[float]) -> float:
     if n == 0:
         raise ValueError("Список чисел не может быть пустым")
     mid = n // 2
-    return (sorted_numbers[mid] + sorted_numbers[-mid - 1]) / 2 if n % 2 == 0 else sorted_numbers[mid]
+    return ((sorted_numbers[mid] + sorted_numbers[-mid - 1]) /
+            2) if n % 2 == 0 else sorted_numbers[mid]
 
 
 # 32. Проверка валидности email
@@ -249,7 +255,8 @@ def is_valid_email(email: str) -> bool:
 # 33. Расчет аннуитетного платежа
 def annuity_payment(principal: float, rate: float, periods: int) -> float:
     monthly_rate = rate / 12 / 100
-    return principal * (monthly_rate * (1 + monthly_rate) ** periods) / ((1 + monthly_rate) ** periods - 1)
+    return (principal * (monthly_rate * (1 + monthly_rate) ** periods) /
+            ((1 + monthly_rate) ** periods - 1))
 
 
 # 34. Поиск наиболее частого элемента
@@ -307,7 +314,8 @@ def rectangle_area(length: float, width: float) -> float:
 
 # 42. Генерация случайной строки
 def random_string(length: int = 10) -> str:
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+    return ''.join(random.choices(string.ascii_letters + string.digits,
+                                  k=length))
 
 
 # 43. Проверка армстронгового числа
@@ -325,7 +333,8 @@ def celsius_to_kelvin(c: float) -> float:
 # 45. Поиск глубины списка
 def list_depth(lst: List) -> int:
     if isinstance(lst, list):
-        return 1 + max((list_depth(item) for item in lst), default=0)
+        return 1 + max((list_depth(item) for item in lst),
+                       default=0)
     return 0
 
 
@@ -342,7 +351,9 @@ def is_arithmetic_sequence(sequence: List[Union[int, float]]) -> bool:
     if len(sequence) < 2:
         return True
     diff = sequence[1] - sequence[0]
-    return all(sequence[i + 1] - sequence[i] == diff for i in range(len(sequence) - 1))
+    return all(sequence[i + 1] -
+               sequence[i] ==
+               diff for i in range(len(sequence) - 1))
 
 
 # 48. Поиск наибольшего общего делителя трех чисел
@@ -492,7 +503,8 @@ def generate_primes(n: int) -> List[int]:
     sieve = [True] * (n + 1)
     for i in range(2, int(math.sqrt(n)) + 1):
         if sieve[i]:
-            sieve[i * i: n + 1: i] = [False] * len(sieve[i * i: n + 1: i])
+            sieve[i * i: n + 1: i] =\
+                [False] * len(sieve[i * i: n + 1: i])
     return [i
             for i, IS_PRIME in enumerate(sieve) if IS_PRIME and i >= 2]
 
@@ -519,7 +531,8 @@ def Caesar_cipher(text: str, shift: int) -> str:
     for char in text:
         if char.isalpha():
             base = ord('A') if char.isupper() else ord('a')
-            results.append(chr((ord(char) - base + shift) % 26 + base))
+            results.append(chr((ord(char) -
+                                base + shift) % 26 + base))
         else:
             results.append(char)
     return ''.join(results)
