@@ -1,5 +1,14 @@
 import unittest
-from main import *
+from main import (is_palindrome,
+                  fibonacci,
+                  celsius_to_fahrenheit,
+                  average,
+                  is_anagram,
+                  gcd,
+                  meters_to_feet,
+                  count_vowels,
+                  reverse_string,
+                  is_prime)
 
 
 class TestPalindromeFunctions(unittest.TestCase):

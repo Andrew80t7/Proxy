@@ -231,7 +231,10 @@ def degrees_to_radians(degrees: float) -> float:
 
 
 # 30. Расчет расстояния между точками
-def distance_between_points(x1: float, y1: float, x2: float, y2: float) -> float:
+def distance_between_points(x1: float,
+                            y1: float,
+                            x2: float,
+                            y2: float) -> float:
     return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
 
@@ -253,7 +256,9 @@ def is_valid_email(email: str) -> bool:
 
 
 # 33. Расчет аннуитетного платежа
-def annuity_payment(principal: float, rate: float, periods: int) -> float:
+def annuity_payment(principal: float,
+                    rate: float,
+                    periods: int) -> float:
     monthly_rate = rate / 12 / 100
     return (principal * (monthly_rate * (1 + monthly_rate) ** periods) /
             ((1 + monthly_rate) ** periods - 1))
@@ -503,7 +508,7 @@ def generate_primes(n: int) -> List[int]:
     sieve = [True] * (n + 1)
     for i in range(2, int(math.sqrt(n)) + 1):
         if sieve[i]:
-            sieve[i * i: n + 1: i] =\
+            sieve[i * i: n + 1: i] = \
                 [False] * len(sieve[i * i: n + 1: i])
     return [i
             for i, IS_PRIME in enumerate(sieve) if IS_PRIME and i >= 2]

@@ -1,3 +1,4 @@
+import math
 import sys
 import threading
 import time
@@ -21,24 +22,44 @@ PROXY = {"http": "http://127.0.0.1:8080",
          "https": None}
 
 
+def is_prime(n: int) -> bool:
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def meters_to_feet(m: float) -> float:
+    return m * 3.28084
+
+
+def is_leap_year(year: int) -> bool:
+    return (year % 4 == 0 and
+            (year % 100 != 0 or year % 400 == 0))
+
+
+def reverse_list(lst: list) -> list:
+    """Возвращает обратный порядок элементов списка"""
+    return lst[::-1]
+
+
 def is_even(number):
     """Проверяет, является ли число чётным"""
     return number % 2 == 0
 
 
 def is_palindrome(s):
-    """Проверяет, является ли строка палиндромом"""
     s = s.lower().replace(" ", "")
     return s == s[::-1]
 
 
 def sum_list(numbers):
-    """Возвращает сумму элементов списка"""
     return sum(numbers)
 
 
 def celsius_to_fahrenheit(c):
-    """Конвертирует градусы Цельсия в Фаренгейты"""
     return (c * 9 / 5) + 32
 
 
@@ -46,16 +67,7 @@ def rewrite_links(html: str,
                   base_url: str,
                   embed_ads: bool,
                   flag: int) -> str:
-    """
-    Переписывает ссылки в HTML, чтобы они вели обратно на прокси-сервер.
-    Также вставляет рекламный баннер в начало <body>.
 
-    :param html: HTML-код страницы
-    :param base_url: Исходный URL страницы
-    :param embed_ads: Вставлять ли баннеры
-    :param flag: Флаг, определяющий тип баннера
-    :return: Изменённый HTML
-    """
     soup = BeautifulSoup(html, "html.parser")
 
     # Генерация и вставка баннера

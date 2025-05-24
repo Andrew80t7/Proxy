@@ -5,7 +5,37 @@ from web_proxy import (app,
                        sum_list,
                        is_palindrome,
                        is_even,
-                       celsius_to_fahrenheit)
+                       celsius_to_fahrenheit,
+                       meters_to_feet,
+                       is_leap_year,
+                       reverse_list,
+                       is_prime,
+                       )
+
+
+class TestFunctions(unittest.TestCase):
+    def test_is_prime(self):
+        self.assertTrue(is_prime(7919))
+        self.assertFalse(is_prime(1))
+        self.assertFalse(is_prime(4))
+        self.assertTrue(is_prime(2))
+        self.assertFalse(is_prime(-5))
+
+    def test_meters_to_feet(self):
+        self.assertAlmostEqual(meters_to_feet(1), 3.28084, places=4)
+        self.assertAlmostEqual(meters_to_feet(0), 0.0)
+        self.assertAlmostEqual(meters_to_feet(2.5), 8.2021, places=3)
+
+    def test_is_leap_year(self):
+        self.assertTrue(is_leap_year(2000))
+        self.assertTrue(is_leap_year(2020))
+        self.assertFalse(is_leap_year(1900))
+        self.assertFalse(is_leap_year(2021))
+
+    def test_reverse_list(self):
+        self.assertEqual(reverse_list([1, 2, 3, 4]), [4, 3, 2, 1])
+        self.assertEqual(reverse_list(["a", "b", "c"]), ["c", "b", "a"])
+        self.assertEqual(reverse_list([]), [])
 
 
 class TestSimpleFunctions(unittest.TestCase):
@@ -22,7 +52,8 @@ class TestSimpleFunctions(unittest.TestCase):
         self.assertTrue(is_palindrome("A"))
         self.assertTrue(is_palindrome("Madam"))
         self.assertTrue(is_palindrome("Was it a car or a cat I saw"))
-        self.assertTrue(is_palindrome("А роза упала на лапу Азора"))
+        self.assertTrue(is_palindrome("А роза"
+                                      " упала на лапу Азора"))
         self.assertFalse(is_palindrome("Hello"))
         self.assertFalse(is_palindrome("Python"))
 
