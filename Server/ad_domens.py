@@ -20,7 +20,8 @@ def extract_domains(input_lines: list) -> Set[str]:
     return domains
 
 
-def save_domains(domains: Set[str], output_file: str) -> int:
+def save_domains(domains: Set[str],
+                 output_file: str) -> int:
     try:
         with open(output_file, "w", encoding="utf-8") as f:
             for domain in sorted(domains):
@@ -39,7 +40,9 @@ def process_adblock_list(input_file: str,
 
         domains = extract_domains(lines)
         count = save_domains(domains, output_file)
-        print(f"Сохранено {count} доменов в {output_file}")
+        print(f"Сохранено"
+              f" {count} доменов в"
+              f" {output_file}")
 
     except FileNotFoundError:
         raise RuntimeError("Входной файл не найден")

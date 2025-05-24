@@ -4,7 +4,10 @@ from Server.ProxyServer import (ProxyServer,
                                 is_prime,
                                 is_palindrome,
                                 factorial,
-                                reverse_string, AD_HOSTS_1, is_ad_host, modify_html)
+                                reverse_string,
+                                AD_HOSTS_1,
+                                is_ad_host,
+                                modify_html)
 
 
 class DummySocket:
@@ -50,7 +53,9 @@ class TestHTMLUtils(unittest.TestCase):
     def test_modify_html_removal_and_style(self):
         html = (b"<html><head></head><body>"
                 b"<div class='ad-container'>Ad"
-                b"</div><p>Hello</p></body></html>")
+                b"</div>"
+                b"<p>Hello</p></body></html>")
+
         cleaned, blocked = modify_html(html)
         text = cleaned.decode('utf-8')
         self.assertNotIn('ad-container', text)
@@ -66,9 +71,12 @@ class TestAdHostUtils(unittest.TestCase):
         # clear and set
         AD_HOSTS_1.clear()
         AD_HOSTS_1.update({'ads.test.com'})
-        self.assertTrue(is_ad_host('ads.test.com'))
-        self.assertTrue(is_ad_host('sub.ads.test.com'))
-        self.assertFalse(is_ad_host('example.com'))
+        self.assertTrue(
+            is_ad_host('ads.test.com'))
+        self.assertTrue(
+            is_ad_host('sub.ads.test.com'))
+        self.assertFalse(
+            is_ad_host('example.com'))
 
 
 class TestProxyServer(unittest.TestCase):
@@ -100,9 +108,12 @@ class TestProxyServer(unittest.TestCase):
         self.assertFalse(is_prime(15))
 
     def test_fibonacci_valid(self):
-        self.assertEqual(fibonacci(0), 0)
-        self.assertEqual(fibonacci(1), 1)
-        self.assertEqual(fibonacci(7), 13)
+        self.assertEqual(
+            fibonacci(0), 0)
+        self.assertEqual(
+            fibonacci(1), 1)
+        self.assertEqual(
+            fibonacci(7), 13)
 
     def test_fibonacci_negative(self):
         with self.assertRaises(ValueError):
