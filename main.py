@@ -60,8 +60,7 @@ def is_anagram(s1: str, s2: str) -> bool:
 def average(nums: List[Union[int, float]]) -> float:
     """Вычисляет среднее значение списка чисел"""
     if not nums:
-        raise ValueError("Список чисел н"
-                         "е может быть пустым")
+        raise ValueError("Список чисел не может быть пустым")
     return sum(nums) / len(nums)
 
 
