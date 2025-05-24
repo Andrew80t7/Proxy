@@ -1,7 +1,10 @@
 import unittest
 import tempfile
 from pathlib import Path
-from Server.ad_domens import extract_domains, save_domains, process_adblock_list
+from Server.ad_domens import (extract_domains,
+                              save_domains,
+                              process_adblock_list
+                              )
 
 
 class TestAdDomains(unittest.TestCase):
