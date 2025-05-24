@@ -1,14 +1,68 @@
 # main.py
-
+import math
 import sys
 import time
 from Server.ProxyServer import ProxyServer
 from Logs.logger import get_logger
-from typing import Union
+from typing import Union, List
 
 logger = get_logger()
 HOST = "localhost"
 PORT = 8080
+
+
+def is_prime(n: int) -> bool:
+    """Проверяет, является ли число простым"""
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def reverse_string(s: str) -> str:
+    """Возвращает обратную строку"""
+    return s[::-1]
+
+
+def count_vowels(s: str) -> int:
+    """Считает количество гласных букв в строке"""
+    vowels = 'aeiouаеёиоуыэюя'
+    return sum(1 for char in s.lower() if char in vowels)
+
+
+def meters_to_feet(m: Union[int, float]) -> float:
+    """Конвертирует метры в футы"""
+    try:
+        return m * 3.28084
+    except TypeError:
+        logger.error("Некорректный тип данных"
+                     " для конвертации метров в футы")
+        raise
+
+
+def gcd(a: int, b: int) -> int:
+    """Находит наибольший общий делитель двух чисел"""
+    while b:
+        a, b = b, a % b
+    return a
+
+
+def is_anagram(s1: str, s2: str) -> bool:
+    """Проверяет, являются ли строки анаграммами"""
+    return sorted(
+        s1.lower().
+        replace(" ", "")) == sorted(s2.lower().
+                                    replace(" ", ""))
+
+
+def average(nums: List[Union[int, float]]) -> float:
+    """Вычисляет среднее значение списка чисел"""
+    if not nums:
+        raise ValueError("Список чисел н"
+                         "е может быть пустым")
+    return sum(nums) / len(nums)
 
 
 # Добавляем демонстрационные функции
