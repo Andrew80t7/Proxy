@@ -1,22 +1,7 @@
 import unittest
 import warnings
-from http.server import HTTPServer
 
-from Server.dump import (
-    sum_numbers,
-    fibonacci,
-    DumpRequestHandler,
-    find_min,
-    find_max,
-    count_words,
-    is_prime,
-    factorial,
-    celsius_to_fahrenheit,
-    is_palindrome,
-    reverse_string,
-    count_vowels,
-    is_even,
-)
+from Server.dump import *
 
 warnings.filterwarnings("ignore",
                         category=ResourceWarning)
