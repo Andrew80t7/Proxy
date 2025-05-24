@@ -8,25 +8,25 @@ import Server.ProxyServer as ps
 
 class TestProxyUtils(unittest.TestCase):
     def test_factorial(self):
-        self.assertEqual(ps.factorial(0),
+        self.assertEqual(ps.Factorial(0),
                          1)
-        self.assertEqual(ps.factorial(5),
+        self.assertEqual(ps.Factorial(5),
                          120)
         with self.assertRaises(ValueError):
-            ps.factorial(-1)
+            ps.Factorial(-1)
 
     def test_is_palindrome(self):
-        self.assertTrue(ps.is_palindrome("A man, a plan,"
+        self.assertTrue(ps.Is_palindrome("A man, a plan,"
                                          " a canal: Panama"))
-        self.assertFalse(ps.is_palindrome("hello"))
+        self.assertFalse(ps.Is_palindrome("hello"))
 
     def test_is_prime(self):
-        self.assertFalse(ps.is_prime(-1))
-        self.assertFalse(ps.is_prime(0))
-        self.assertFalse(ps.is_prime(1))
-        self.assertTrue(ps.is_prime(2))
-        self.assertTrue(ps.is_prime(13))
-        self.assertFalse(ps.is_prime(15))
+        self.assertFalse(ps.Is_prime(-1))
+        self.assertFalse(ps.Is_prime(0))
+        self.assertFalse(ps.Is_prime(1))
+        self.assertTrue(ps.Is_prime(2))
+        self.assertTrue(ps.Is_prime(13))
+        self.assertFalse(ps.Is_prime(15))
 
     def test_fibonacci(self):
         self.assertEqual(ps.fibonacci(0),
@@ -39,9 +39,9 @@ class TestProxyUtils(unittest.TestCase):
             ps.fibonacci(-5)
 
     def test_reverse_string(self):
-        self.assertEqual(ps.reverse_string("abc"),
+        self.assertEqual(ps.Reverse_string("abc"),
                          "cba")
-        self.assertEqual(ps.reverse_string(""),
+        self.assertEqual(ps.Reverse_string(""),
                          "")
 
     def test_modify_html(self):
@@ -126,23 +126,23 @@ class TestProxyUtils(unittest.TestCase):
 
 class TestUtils(unittest.TestCase):
     def test_factorial(self):
-        self.assertEqual(ps.factorial(0), 1)
-        self.assertEqual(ps.factorial(5), 120)
+        self.assertEqual(ps.Factorial(0), 1)
+        self.assertEqual(ps.Factorial(5), 120)
         with self.assertRaises(ValueError):
-            ps.factorial(-1)
+            ps.Factorial(-1)
 
     def test_is_palindrome(self):
-        self.assertTrue(ps.is_palindrome("A man,"
+        self.assertTrue(ps.Is_palindrome("A man,"
                                          " a plan, a canal: Panama"))
-        self.assertFalse(ps.is_palindrome("hello"))
+        self.assertFalse(ps.Is_palindrome("hello"))
 
     def test_is_prime(self):
-        self.assertFalse(ps.is_prime(-1))
-        self.assertFalse(ps.is_prime(0))
-        self.assertFalse(ps.is_prime(1))
-        self.assertTrue(ps.is_prime(2))
-        self.assertTrue(ps.is_prime(13))
-        self.assertFalse(ps.is_prime(15))
+        self.assertFalse(ps.Is_prime(-1))
+        self.assertFalse(ps.Is_prime(0))
+        self.assertFalse(ps.Is_prime(1))
+        self.assertTrue(ps.Is_prime(2))
+        self.assertTrue(ps.Is_prime(13))
+        self.assertFalse(ps.Is_prime(15))
 
     def test_fibonacci(self):
         self.assertEqual(ps.fibonacci(0), 0)
@@ -152,9 +152,9 @@ class TestUtils(unittest.TestCase):
             ps.fibonacci(-5)
 
     def test_reverse_string(self):
-        self.assertEqual(ps.reverse_string("abc"),
+        self.assertEqual(ps.Reverse_string("abc"),
                          "cba")
-        self.assertEqual(ps.reverse_string(""),
+        self.assertEqual(ps.Reverse_string(""),
                          "")
 
     def test_modify_html(self):
