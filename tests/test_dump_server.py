@@ -4,7 +4,7 @@ import warnings
 from Server.dump import (
     sum_numbers,
     fibonacci,
-    factorial)
+    fact)
 
 warnings.filterwarnings("ignore",
                         category=ResourceWarning)
@@ -13,16 +13,16 @@ warnings.filterwarnings("ignore",
 class TestDumpServer(unittest.TestCase):
     def test_factorial(self):
         # Тестирование нормальных случаев
-        self.assertEqual(factorial(0),
+        self.assertEqual(fact(0),
                          1)
-        self.assertEqual(factorial(1),
+        self.assertEqual(fact(1),
                          1)
-        self.assertEqual(factorial(5),
+        self.assertEqual(fact(5),
                          120)
 
         # Тестирование исключений
         with self.assertRaises(ValueError) as context:
-            factorial(-5)
+            fact(-5)
         self.assertEqual(str(context.exception),
                          "Factorial"
                          " is not defined for"
@@ -65,7 +65,7 @@ class TestDumpServer(unittest.TestCase):
 
     def test_edge_cases(self):
         # Комплексные пограничные случаи
-        self.assertEqual(factorial(20),
+        self.assertEqual(fact(20),
                          2432902008176640000)
         self.assertEqual(fibonacci(20), 6765)
         self.assertEqual(sum_numbers([1e6, 2e6, 3e6]), 6e6)
