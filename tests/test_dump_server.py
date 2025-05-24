@@ -1,25 +1,29 @@
-
 import unittest
 import warnings
 
-
 from Server.dump import DUMP_DIR, run_dump_server, sum_numbers, fibonacci, factorial
 
-# Подавляем предупреждения о не закрытых соединениях
-warnings.filterwarnings("ignore", category=ResourceWarning)
+warnings.filterwarnings("ignore",
+                        category=ResourceWarning)
 
 
 class TestDumpServer(unittest.TestCase):
     def test_factorial(self):
         # Тестирование нормальных случаев
-        self.assertEqual(factorial(0), 1)
-        self.assertEqual(factorial(1), 1)
-        self.assertEqual(factorial(5), 120)
+        self.assertEqual(factorial(0),
+                         1)
+        self.assertEqual(factorial(1),
+                         1)
+        self.assertEqual(factorial(5),
+                         120)
 
         # Тестирование исключений
         with self.assertRaises(ValueError) as context:
             factorial(-5)
-        self.assertEqual(str(context.exception), "Factorial is not defined for negative numbers")
+        self.assertEqual(str(context.exception),
+                         "Factorial"
+                         " is not defined for"
+                         " negative numbers")
 
     def test_fibonacci(self):
         # Тестирование базовых случаев
@@ -42,7 +46,9 @@ class TestDumpServer(unittest.TestCase):
         self.assertEqual(sum_numbers([-1, 0, 1]), 0)
 
         # Тестирование с дробными числами
-        self.assertAlmostEqual(sum_numbers([1.1, 2.2, 3.3]), 6.6, places=1)
+        self.assertAlmostEqual(sum_numbers(
+            [1.1, 2.2, 3.3]),
+            6.6, places=1)
 
         # Проверка типа данных
         with self.assertRaises(TypeError):
@@ -50,7 +56,8 @@ class TestDumpServer(unittest.TestCase):
 
     def test_edge_cases(self):
         # Комплексные пограничные случаи
-        self.assertEqual(factorial(20), 2432902008176640000)
+        self.assertEqual(factorial(20),
+                         2432902008176640000)
         self.assertEqual(fibonacci(20), 6765)
         self.assertEqual(sum_numbers([1e6, 2e6, 3e6]), 6e6)
 

@@ -1,0 +1,847 @@
+2025-05-24 11:20:26 - ProxyServer - DEBUG - Попытка подключения к localhost:9999
+2025-05-24 11:20:28 - ProxyServer - ERROR - Соединение отклонено сервером localhost:9999
+2025-05-24 11:20:28 - ProxyServer - DEBUG - Попытка подключения к localhost:9001
+2025-05-24 11:20:28 - ProxyServer - INFO - Успешное подключение к localhost:9001
+2025-05-24 11:20:28 - ProxyServer - DEBUG - Попытка подключения к 10.255.255.1:65000
+2025-05-24 11:20:29 - ProxyServer - ERROR - Таймаут при подключении к 10.255.255.1:65000
+2025-05-24 11:20:29 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:20:29 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:20:29 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:29 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-24 11:20:29 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:29 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:29 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:29 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:29 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:29 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:29 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:29 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:29 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-24 11:20:29 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:29 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:47 - ProxyServer - DEBUG - Попытка подключения к localhost:9999
+2025-05-24 11:20:49 - ProxyServer - ERROR - Соединение отклонено сервером localhost:9999
+2025-05-24 11:20:49 - ProxyServer - DEBUG - Попытка подключения к localhost:9001
+2025-05-24 11:20:49 - ProxyServer - INFO - Успешное подключение к localhost:9001
+2025-05-24 11:20:49 - ProxyServer - DEBUG - Попытка подключения к 10.255.255.1:65000
+2025-05-24 11:20:49 - ProxyServer - ERROR - Таймаут при подключении к 10.255.255.1:65000
+2025-05-24 11:20:49 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:20:49 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:20:49 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:49 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-24 11:20:49 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:49 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:49 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:49 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:49 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:49 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:49 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:20:49 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:20:49 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-24 11:20:49 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:20:49 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:21:25 - ProxyServer - DEBUG - Попытка подключения к localhost:9999
+2025-05-24 11:21:27 - ProxyServer - ERROR - Соединение отклонено сервером localhost:9999
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к localhost:9001
+2025-05-24 11:21:27 - ProxyServer - INFO - Успешное подключение к localhost:9001
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к 10.255.255.1:65000
+2025-05-24 11:21:27 - ProxyServer - ERROR - Таймаут при подключении к 10.255.255.1:65000
+2025-05-24 11:21:27 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:21:27 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:21:27 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:21:27 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-24 11:21:27 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:21:27 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:21:27 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:21:27 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:21:27 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:21:27 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:21:27 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:21:27 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:21:27 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-24 11:21:27 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:21:27 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.279086_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.342375_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.342375_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.389053_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.389053_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.395700_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.395700_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.397277_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.397277_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.400468_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.400468_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.420570_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.420570_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.436247_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.436247_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.437980_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.437980_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.452846_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.484650_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.484650_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.484650_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.484650_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.514975_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.514975_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.529745_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.529745_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.531833_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.531833_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.533636_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.579293_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.579293_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.580302_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.580302_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.582523_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.582523_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.584119_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.584119_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.585670_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.585670_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.587552_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.587552_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.589086_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.589086_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.625421_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.625421_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.631259_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.631259_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.656932_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.656932_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.705420_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Запрос: CONNECT api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Попытка подключения к api.browser.yandex.ru:443
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.755088_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.755088_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.800285_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.800285_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.814309_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.814309_response.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.847909_request.dump
+2025-05-24 11:21:27 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112127.863284_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.363330_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Запрос: CONNECT client.hola.org:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Попытка подключения к client.hola.org:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.536250_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.536250_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.540088_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Запрос: CONNECT watson.events.data.microsoft.com:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Попытка подключения к watson.events.data.microsoft.com:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.726926_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.726926_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.729498_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.729498_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.729498_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Запрос: CONNECT perr.hola.org:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Попытка подключения к perr.hola.org:443
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.899565_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.900069_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.901383_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.901888_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.901888_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.903150_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.904635_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.904635_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.904635_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.906068_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.906068_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.906068_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.908308_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.911326_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.911326_response.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.914541_request.dump
+2025-05-24 11:21:30 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112130.914541_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.057260_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.057260_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.062728_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.062728_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.064453_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.064453_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.068011_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.068011_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.088563_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.088563_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.100929_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.100929_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.103909_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.104415_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.105663_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.105663_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.215747_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.217229_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.233401_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.233401_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.238385_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.238385_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.243347_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.243347_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.250345_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Запрос: CONNECT hola.org:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Попытка подключения к hola.org:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.403332_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.403332_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.403332_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.405244_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.406666_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.hola.org:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.hola.org:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.648170_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.648674_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.648674_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.648674_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.651500_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Запрос: CONNECT perr.su89-cdn.net:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Попытка подключения к perr.su89-cdn.net:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.802188_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.802188_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.802188_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.802188_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.804707_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Запрос: CONNECT perr.c6gj-static.net:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Попытка подключения к perr.c6gj-static.net:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.965810_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.965810_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.965810_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.967776_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.967776_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.967776_response.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112131.968871_request.dump
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Запрос: CONNECT perr.zspeed-cdn.com:443
+2025-05-24 11:21:31 - ProxyServer - DEBUG - Попытка подключения к perr.zspeed-cdn.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.153622_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.153622_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.153622_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.153622_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.155465_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Запрос: CONNECT perr.yg5sjx5kzy.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Попытка подключения к perr.yg5sjx5kzy.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.344512_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.344512_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.344512_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.347070_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.347070_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.347070_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.348749_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.348749_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.348749_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.348749_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.348749_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.350945_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.350945_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Запрос: CONNECT perr.x-cdn-static.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Попытка подключения к perr.x-cdn-static.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.517972_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.517972_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.517972_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.519672_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.519672_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.519672_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.519672_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.522238_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.522749_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.523878_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Запрос: CONNECT watson.events.data.microsoft.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Попытка подключения к watson.events.data.microsoft.com:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.708036_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Запрос: CONNECT su89-cdn.net:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Попытка подключения к su89-cdn.net:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.895842_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.903343_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.903343_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.903343_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.903343_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.905411_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.905411_response.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112132.905411_request.dump
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Запрос: CONNECT c6gj-static.net:443
+2025-05-24 11:21:32 - ProxyServer - DEBUG - Попытка подключения к c6gj-static.net:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.086593_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.086593_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.086593_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.088650_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.089155_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Запрос: CONNECT zspeed-cdn.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Попытка подключения к zspeed-cdn.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.271060_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.275067_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.278976_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.278976_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.280289_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Запрос: CONNECT yg5sjx5kzy.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Попытка подключения к yg5sjx5kzy.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.464127_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.464127_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.464127_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.466616_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.469724_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.472532_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Запрос: CONNECT x-cdn-static.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Попытка подключения к x-cdn-static.com:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.667624_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.su89-cdn.net:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.su89-cdn.net:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_response.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112133.950921_request.dump
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.c6gj-static.net:443
+2025-05-24 11:21:33 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.c6gj-static.net:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.235865_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239074_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.239582_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.zspeed-cdn.com:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.zspeed-cdn.com:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.499429_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.500445_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.501638_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.502145_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.yg5sjx5kzy.com:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.yg5sjx5kzy.com:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.790028_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.790028_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.790028_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_response.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112134.791996_request.dump
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Запрос: CONNECT client-cdn4.x-cdn-static.com:443
+2025-05-24 11:21:34 - ProxyServer - DEBUG - Попытка подключения к client-cdn4.x-cdn-static.com:443
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.069061_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.069061_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.071356_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Запрос: CONNECT watson.events.data.microsoft.com:443
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Попытка подключения к watson.events.data.microsoft.com:443
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.257389_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.257389_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.257389_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.257389_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.260261_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.264485_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.268081_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.268081_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.269903_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.269903_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.271877_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.271877_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.273758_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.273758_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.275448_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.275448_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.277490_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.277490_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.279195_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.279195_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.280829_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.281334_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.282484_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.282484_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.314571_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.315571_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.317056_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.317056_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.317056_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.317056_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.331426_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.331426_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.333705_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.333705_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.335722_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.335722_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.338675_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.338675_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.409726_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.409726_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.441423_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.441423_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.446936_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.446936_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.449198_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.449198_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.488546_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.488546_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.499391_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.499391_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.499391_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.499391_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.566909_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.566909_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.573562_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.573562_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.582920_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.582920_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.598575_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.598575_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.614277_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.614277_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.619076_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.619076_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.623318_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.623318_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.625908_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.625908_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.818451_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.818451_response.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112135.969800_request.dump
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Запрос: CONNECT watson.events.data.microsoft.com:443
+2025-05-24 11:21:35 - ProxyServer - DEBUG - Попытка подключения к watson.events.data.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.155405_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.155405_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.325828_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.325828_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.328554_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.328554_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.330040_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.330040_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.493602_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.493602_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.496837_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.496837_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.499271_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.499271_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.500880_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.500880_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.759398_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.759398_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.803443_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Запрос: CONNECT cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Попытка подключения к cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.917854_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Запрос: CONNECT cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Попытка подключения к cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.971459_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.971963_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.971963_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.971963_response.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112136.971963_request.dump
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Запрос: CONNECT cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:36 - ProxyServer - DEBUG - Попытка подключения к cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.028464_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Запрос: CONNECT cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Попытка подключения к cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.090410_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.090410_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.090410_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.090410_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.091984_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.091984_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.091984_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.091984_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.091984_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Запрос: CONNECT cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Попытка подключения к cp801.prod.do.dsp.mp.microsoft.com:443
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Установка HTTPS-соединения
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Peer добавлен в список мониторинга
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.147675_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.150688_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.150688_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.152350_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.152350_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.152350_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.152350_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.183987_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.183987_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.193251_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.193251_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.196144_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.196144_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.200606_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.200606_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.203683_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.203683_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.206614_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.206614_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.210390_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.210390_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.210390_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.211642_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.211642_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.211642_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.213490_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.213490_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.232002_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.232002_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.243660_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.243660_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.263968_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.263968_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.265857_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.265857_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.267968_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.267968_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.271037_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.271037_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.271037_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.271037_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.296013_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.296013_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.311700_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.311700_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.327276_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.327276_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.358814_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.358814_response.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.374695_request.dump
+2025-05-24 11:21:37 - ProxyServer - DEBUG - Dump сохранён: C:\Users\Пользователь\PycharmProjects\Proxy\Server\dumps\2025-05-24T112137.374695_response.dump
+2025-05-24 11:28:42 - ProxyServer - DEBUG - Попытка подключения к localhost:9999
+2025-05-24 11:28:44 - ProxyServer - ERROR - Соединение отклонено сервером localhost:9999
+2025-05-24 11:28:44 - ProxyServer - DEBUG - Попытка подключения к localhost:9001
+2025-05-24 11:28:44 - ProxyServer - INFO - Успешное подключение к localhost:9001
+2025-05-24 11:28:44 - ProxyServer - DEBUG - Попытка подключения к 10.255.255.1:65000
+2025-05-24 11:28:44 - ProxyServer - ERROR - Таймаут при подключении к 10.255.255.1:65000
+2025-05-24 11:28:44 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:28:44 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:28:44 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:28:44 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:28:44 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:38 - ProxyServer - DEBUG - Попытка подключения к localhost:9999
+2025-05-24 11:37:40 - ProxyServer - ERROR - Соединение отклонено сервером localhost:9999
+2025-05-24 11:37:41 - ProxyServer - DEBUG - Попытка подключения к localhost:9001
+2025-05-24 11:37:41 - ProxyServer - INFO - Успешное подключение к localhost:9001
+2025-05-24 11:37:41 - ProxyServer - DEBUG - Попытка подключения к 10.255.255.1:65000
+2025-05-24 11:37:41 - ProxyServer - ERROR - Таймаут при подключении к 10.255.255.1:65000
+2025-05-24 11:37:41 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:37:41 - ProxyServer - ERROR - Некорректный тип температуры
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Очищено 1 активных соединений
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - ERROR - Ошибка при принятии соединения: fail
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен
+2025-05-24 11:37:41 - ProxyServer - INFO - Прокси-сервер инициализирован на 127.0.0.1:0
+2025-05-24 11:37:41 - ProxyServer - INFO - Завершение работы сервера
+2025-05-24 11:37:41 - ProxyServer - INFO - Сервер остановлен

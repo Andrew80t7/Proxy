@@ -21,6 +21,50 @@ AD_HOSTS_1 = set()
 logger = get_logger()
 
 
+def factorial(n: int) -> int:
+    if n < 0:
+        raise ValueError("Negative input not allowed")
+    return 1 if n == 0 else n * factorial(n - 1)
+
+
+def is_palindrome(s: str) -> bool:
+    import re
+    cleaned = re.sub(r'[^A-Za-z0-9]',
+                     '', s).lower()
+    return cleaned == cleaned[::-1]
+
+
+def is_prime(n: int) -> bool:
+    """Check if n is a prime number."""
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
+def fibonacci(n: int) -> int:
+    """Return the nth Fibonacci number."""
+    if n < 0:
+        raise ValueError("Negative index not allowed")
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+
+def reverse_string(s: str) -> str:
+    """Return the reverse of the string s."""
+    return s[::-1]
+
+
 def modify_html(html: bytes) -> Tuple[bytes, List[dict]]:
     """
     удаляет рекламу
@@ -70,7 +114,6 @@ def modify_html(html: bytes) -> Tuple[bytes, List[dict]]:
         return str(soup).encode("utf-8"), blocked_elements
 
     except Exception:
-        # TODO: handle HTML modification errors
         pass
         return html, blocked_elements
 
@@ -93,13 +136,15 @@ def save_dump(data: bytes, direction: str):
 
     """
 
-    ts = datetime.now().isoformat(timespec="microseconds").replace(":", "")
+    ts = datetime.now().isoformat(timespec="microseconds").replace(":",
+                                                                   "")
     filename = f"{ts}_{direction}.dump"
     path = os.path.join(DUMP_DIR, filename)
 
     with open(path, "wb") as file:
         header = f"Timestamp: {ts}\nDirection: {direction}\n\n"
-        file.write(header.encode("utf-8", errors="ignore"))
+        file.write(header.encode("utf-8",
+                                 errors="ignore"))
         file.write(data)
 
     logger.debug(f"Dump сохранён: {path}")
@@ -128,7 +173,8 @@ def modify_request(data: bytes) -> bytes:
             return data
 
         # первая строка: метод, URL, протокол
-        first = lines[0].decode("utf-8", errors="ignore").split(" ")
+        first = lines[0].decode("utf-8",
+                                errors="ignore").split(" ")
         if len(first) < 3:
             return data
         method, url, proto = first
@@ -141,7 +187,6 @@ def modify_request(data: bytes) -> bytes:
             )
         return b"\r\n".join(lines)
     except UnicodeError:
-        # TODO: handle decoding errors
         pass
         return data
 
@@ -153,7 +198,8 @@ def parse_request(data: bytes):
     if not lines:
         return None, None, None
 
-    first_line = lines[0].decode("utf-8", errors="ignore")
+    first_line = lines[0].decode("utf-8",
+                                 errors="ignore")
     parts = first_line.split(" ")
     if len(parts) < 2:
         return None, None, None
@@ -169,9 +215,11 @@ def parse_request(data: bytes):
         # Обработка заголовков
         for tag_line in lines[1:]:
             try:
-                line_str = tag_line.decode("utf-8", errors="ignore")
+                line_str = tag_line.decode("utf-8",
+                                           errors="ignore")
                 if line_str.lower().startswith("host:"):
-                    host_port = line_str.split(":", 1)[1].strip()
+                    host_port = line_str.split(":",
+                                               1)[1].strip()
                     if ":" in host_port:
                         HOST, port = host_port.split(":")
                         port = int(port)
@@ -180,12 +228,8 @@ def parse_request(data: bytes):
                         port = 80
                     return method, HOST, port
             except Exception:
-                # TODO: handle header parsing errors
                 pass
         return None, None, None
-
-
-# ... остальная часть класса ProxyServer без изменений ...
 
 
 class ProxyServer:
@@ -199,17 +243,21 @@ class ProxyServer:
         Инициализирует прокси-сервер.
 
         """
-        self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.server = socket.socket(socket.AF_INET,
+                                    socket.SOCK_STREAM)
+        self.server.setsockopt(socket.SOL_SOCKET,
+                               socket.SO_REUSEADDR, 1)
         self.server.settimeout(SOCKET_TIMEOUT)
-        self.server.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+        self.server.setsockopt(socket.IPPROTO_TCP,
+                               socket.TCP_NODELAY, 1)
         self.server.bind((HOST, PORT))
         self.server.listen(200)
         self.input_list = [self.server]
         self.channel = {}
         self.running = True
         self.last_cleanup = time.time()
-        logger.info(f"Прокси-сервер инициализирован на {HOST}:{PORT}")
+        logger.info(f"Прокси-сервер инициализирован на"
+                    f" {HOST}:{PORT}")
 
     def _cleanup_inactive_connections(self):
         """
@@ -217,7 +265,7 @@ class ProxyServer:
         """
 
         current_time = time.time()
-        if current_time - self.last_cleanup < 60:  # Проверяем каждую минуту
+        if current_time - self.last_cleanup < 60:
             return
 
         try:
@@ -237,15 +285,18 @@ class ProxyServer:
 
             self.input_list = valid_sockets
             self.last_cleanup = current_time
-            logger.info(f"Очищено {len(self.input_list)} активных соединений")
+            logger.info(f"Очищено {len(self.input_list)}"
+                        f" активных соединений")
         except OSError as e:
-            logger.error(f"Ошибка при очистке соединений: {e}")
+            logger.error(f"Ошибка при очистке соединений:"
+                         f" {e}")
 
     def main_loop(self):
         """
         Основной цикл обработки событий сервера.
         """
-        logger.info("Сервер запущен и ожидает подключений")
+        logger.info("Сервер запущен и ожидает"
+                    " подключений")
 
         while self.running:
             try:
@@ -253,11 +304,14 @@ class ProxyServer:
                 self._cleanup_inactive_connections()
 
                 if not self.input_list:
-                    logger.warning("Нет активных сокетов, завершение работы")
+                    logger.warning("Нет активных сокетов,"
+                                   " завершение работы")
                     break
 
-                # Используем таймаут для select, чтобы не блокировать навсегда
-                input_ready, _, _ = select.select(self.input_list, [], [], 0.1)
+                input_ready, _, _ = select.select(self.input_list,
+                                                  [],
+                                                  [],
+                                                  0.1)
                 for s in input_ready:
                     if s == self.server:
                         self.on_accept()
@@ -266,7 +320,9 @@ class ProxyServer:
             except select.error as e:
                 if e.args[0] == errno.EBADF:
                     logger.warning(
-                        "Обнаружен невалидный файловый дескриптор, очистка сокетов"
+                        "Обнаружен"
+                        " невалидный файловый дескриптор,"
+                        " очистка сокетов"
                     )
                     self._cleanup_inactive_connections()
                 else:
@@ -282,9 +338,11 @@ class ProxyServer:
         try:
             clientsock, clientaddr = self.server.accept()
             clientsock.settimeout(SOCKET_TIMEOUT)
-            # Устанавливаем TCP_NODELAY для уменьшения задержек
-            clientsock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
-            logger.info(f"Новое подключение от {clientaddr}")
+            clientsock.setsockopt(socket.IPPROTO_TCP,
+                                  socket.TCP_NODELAY,
+                                  1)
+            logger.info(f"Новое подключение от"
+                        f" {clientaddr}")
             self.input_list.append(clientsock)
             self.channel[clientsock] = {
                 "peer": None,
@@ -292,10 +350,10 @@ class ProxyServer:
                 "type": None,
             }
         except socket.timeout:
-            # Игнорируем таймауты при принятии соединений
             pass
         except OSError as e:
-            logger.error(f"Ошибка при принятии соединения: {e}")
+            logger.error(f"Ошибка при принятии"
+                         f" соединения: {e}")
 
     def on_recv(self, s: socket.socket):
         """
@@ -304,7 +362,8 @@ class ProxyServer:
         try:
             # Проверяем, что сокет всё ещё валиден
             if s.fileno() == -1:
-                logger.warning("Получен запрос от невалидного сокета")
+                logger.warning("Получен запрос"
+                               " от невалидного сокета")
                 self._cleanup_inactive_connections()
                 return
 
@@ -321,25 +380,32 @@ class ProxyServer:
                 method, HOST, port = parse_request(data)
 
                 if method == "CONNECT" and HOST and is_ad_host(HOST):
-                    logger.info(f"BLOCKING CONNECT to ad host: {HOST}")
-                    s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
+                    logger.info(f"BLOCKING"
+                                f" CONNECT to ad host: {HOST}")
+                    s.send(b"HTTP/1.1"
+                           b" 403 Forbidden\r\n\r\n")
                     return
 
                 if HOST and is_ad_host(HOST):
-                    # Увеличиваем счётчик заблокированных запросов
+
                     self.channel[s].setdefault("blocked_count", 0)
                     self.channel[s]["blocked_count"] += 1
 
                     logger.info(
-                        f"Блокировка запроса к рекламному домену: {HOST} "
-                        f"(total blocked: {self.channel[s]['blocked_count']})"
+                        f"Блокировка запроса"
+                        f" к рекламному домену: {HOST} "
+                        f"(total blocked:"
+                        f" {self.channel[s]['blocked_count']})"
                     )
                     if method == "CONNECT":
                         # Блокируем HTTPS CONNECT
-                        s.send(b"HTTP/1.1 403 Forbidden\r\n\r\n")
+                        s.send(b"HTTP/1.1"
+                               b" 403 Forbidden\r\n\r\n")
                     else:
                         # Блокируем HTTP-запрос
-                        resp = b"HTTP/1.1 204 No Content\r\nContent-Length: 0\r\n\r\n"
+                        resp = (b"HTTP/1.1"
+                                b" 204 No Content\r\nContent-Length:"
+                                b" 0\r\n\r\n")
                         s.send(resp)
                         save_dump(resp, "blocked")
                     return
@@ -371,18 +437,20 @@ class ProxyServer:
             self.on_close(s)
 
     def _setup_forward_connection(
-        self,
-        s: socket.socket,
-        forward: socket.socket,
-        method: str,
-        data: bytes,
+            self,
+            s: socket.socket,
+            forward: socket.socket,
+            method: str,
+            data: bytes,
     ):
         """
         Настраивает соединение с целевым сервером.
         """
         try:
             self.channel[s]["peer"] = forward
-            self.channel[forward] = {"peer": s, "parse": False, "type": method}
+            self.channel[forward] = {"peer": s,
+                                     "parse": False,
+                                     "type": method}
 
             if method == "CONNECT":
                 self._handle_https_connection(s)
@@ -399,7 +467,9 @@ class ProxyServer:
         try:
             logger.debug("Установка HTTPS-соединения")
             # Отправляем успешный ответ клиенту
-            s.send(b"HTTP/1.1 200 Connection Established\r\n\r\n")
+            s.send(b"HTTP/1.1 200"
+                   b" Connection"
+                   b" Established\r\n\r\n")
 
             # Настраиваем соединение
             self.channel[s]["type"] = "CONNECT"
@@ -409,15 +479,19 @@ class ProxyServer:
             peer = self.channel[s]["peer"]
             if peer and peer not in self.input_list:
                 self.input_list.append(peer)
-                logger.debug("Peer добавлен в список мониторинга")
+                logger.debug("Peer добавлен"
+                             " в список мониторинга")
 
             logger.info("HTTPS-соединение установлено")
         except OSError as e:
-            logger.error(f"Ошибка при установке HTTPS-соединения: {e}")
+            logger.error(f"Ошибка при установке"
+                         f" HTTPS-соединения: {e}")
             self.on_close(s)
 
     def _handle_http_connection(
-        self, s: socket.socket, forward: socket.socket, data: bytes
+            self, s: socket.socket,
+            forward: socket.socket,
+            data: bytes
     ):
         """
         Обрабатывает HTTP-соединение.
@@ -430,7 +504,8 @@ class ProxyServer:
             self.channel[s]["parse"] = False
             self.input_list.append(forward)
         except OSError as e:
-            logger.error(f"Ошибка при обработке HTTP-соединения: {e}")
+            logger.error(f"Ошибка при обработке"
+                         f" HTTP-соединения: {e}")
             self.on_close(s)
 
     def _handle_connection_error(self, HOST: str, PORT: int, s: socket.socket):
@@ -480,7 +555,8 @@ class ProxyServer:
                     client_addr = s.getpeername()
                     logger.info(f"Закрытие соединения с {client_addr}")
                 except OSError:
-                    logger.info("Закрытие соединения с неизвестным адресом")
+                    logger.info("Закрытие соединения"
+                                " с неизвестным адресом")
 
                 self.input_list.remove(s)
                 if s in self.channel:

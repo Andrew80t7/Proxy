@@ -1,0 +1,8 @@
+Timestamp: 2025-05-24T112132.905411
+Direction: request
+
+CONNECT c6gj-static.net:443 HTTP/1.1
+Host: c6gj-static.net:443
+Proxy-Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36
+

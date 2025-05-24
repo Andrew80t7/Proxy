@@ -1,5 +1,10 @@
 import unittest
-from Server.ProxyServer import ProxyServer
+from Server.ProxyServer import (ProxyServer,
+                                fibonacci,
+                                is_prime,
+                                is_palindrome,
+                                factorial,
+                                reverse_string)
 
 
 class DummySocket:
@@ -14,7 +19,6 @@ class DummySocket:
 
 
 class FakeServer:
-    """Сервер, у которого accept() бросает OSError."""
 
     def __init__(self):
         pass
@@ -43,9 +47,51 @@ class FakeServer:
 
 
 class TestProxyServer(unittest.TestCase):
+
+    def test_factorial_positive(self):
+        self.assertEqual(
+            factorial(0), 1)
+        self.assertEqual(
+            factorial(5), 120)
+
+    def test_factorial_negative(self):
+        with self.assertRaises(ValueError):
+            factorial(-3)
+
+    def test_is_palindrome(self):
+        self.assertTrue(
+            is_palindrome("A man, a plan, "
+                          "a canal: Panama"))
+        self.assertFalse(
+            is_palindrome("Hello"))
+        self.assertTrue(
+            is_palindrome(""))
+
+    def test_is_prime(self):
+        self.assertFalse(is_prime(0))
+        self.assertFalse(is_prime(1))
+        self.assertTrue(is_prime(2))
+        self.assertTrue(is_prime(13))
+        self.assertFalse(is_prime(15))
+
+    def test_fibonacci_valid(self):
+        self.assertEqual(fibonacci(0), 0)
+        self.assertEqual(fibonacci(1), 1)
+        self.assertEqual(fibonacci(7), 13)
+
+    def test_fibonacci_negative(self):
+        with self.assertRaises(ValueError):
+            fibonacci(-1)
+
+    def test_reverse_string(self):
+        self.assertEqual(reverse_string("abc"),
+                         "cba")
+        self.assertEqual(reverse_string(""),
+                         "")
+
     def setUp(self):
-        # поднимаем сервер на свободном порту 0
-        self.srv = ProxyServer('127.0.0.1', 0)
+        self.srv = ProxyServer('127.0.0.1',
+                               0)
 
     def tearDown(self):
         self.srv.shutdown()
@@ -64,17 +110,18 @@ class TestProxyServer(unittest.TestCase):
         self.assertNotIn(dummy, self.srv.input_list)
 
     def test_on_accept_error(self):
-        # Подменяем server на объект, у которого accept() падает
         fake = FakeServer()
         # Заменяем и в input_list
         self.srv.input_list[0] = fake
         self.srv.server = fake
 
-        # Теперь при вызове on_accept() не должно быть исключений
+        # Теперь при вызове on_accept() не должно б
         try:
             self.srv.on_accept()
         except Exception as e:
-            self.fail(f"on_accept() не должна выбрасывать, но выбросила: {e}")
+            self.fail(f"on_accept() "
+                      f"не должна выбрасывать,"
+                      f" но выбросила: {e}")
 
 
 if __name__ == "__main__":

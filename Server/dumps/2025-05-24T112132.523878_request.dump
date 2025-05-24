@@ -1,0 +1,6 @@
+Timestamp: 2025-05-24T112132.523878
+Direction: request
+
+CONNECT watson.events.data.microsoft.com:443 HTTP/1.1
+Host: watson.events.data.microsoft.com:443
+

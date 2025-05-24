@@ -5,11 +5,9 @@ import unittest
 from pathlib import Path
 
 
-# Предполагаем, что ваш скрипт называется ad_extractor.py и содержит логику ниже
-# Мы вынесем функцию в тестируемую область:
 def extract_domains(input_text: str):
     """
-    Возвращает set доменов, отфильтрованных из easylist.
+    Возвращает set доменов,  из easylist.
     """
     domains = set()
     pattern = re.compile(r"^([^#|/$@:\s]+)")

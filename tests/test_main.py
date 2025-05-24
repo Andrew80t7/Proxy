@@ -42,12 +42,20 @@ class TestFibonacciFunctions(unittest.TestCase):
 
 class TestTemperatureConversion(unittest.TestCase):
     def test_integer_values(self):
-        self.assertAlmostEqual(celsius_to_fahrenheit(0), 32.0)
-        self.assertAlmostEqual(celsius_to_fahrenheit(100), 212.0)
+        self.assertAlmostEqual(
+            celsius_to_fahrenheit(0),
+            32.0)
+        self.assertAlmostEqual(
+            celsius_to_fahrenheit(100),
+            212.0)
 
     def test_float_values(self):
-        self.assertAlmostEqual(celsius_to_fahrenheit(36.6), 97.88, places=2)
-        self.assertAlmostEqual(celsius_to_fahrenheit(-40), -40.0)
+        self.assertAlmostEqual(
+            celsius_to_fahrenheit(36.6),
+            97.88, places=2)
+        self.assertAlmostEqual(
+            celsius_to_fahrenheit(-40),
+            -40.0)
 
     def test_invalid_input(self):
         with self.assertRaises(TypeError):
@@ -56,7 +64,10 @@ class TestTemperatureConversion(unittest.TestCase):
             celsius_to_fahrenheit([30])
 
     def test_edge_cases(self):
-        self.assertAlmostEqual(celsius_to_fahrenheit(273.15), 523.67, delta=0.01)
+        self.assertAlmostEqual(
+            celsius_to_fahrenheit(273.15),
+            523.67,
+            delta=0.01)
 
 
 if __name__ == "__main__":

@@ -17,7 +17,9 @@ class TestAdDomains(unittest.TestCase):
         ]
 
         result = extract_domains(test_data)
-        expected = {"example.com", "ads.example.net", "sub.domain.org"}
+        expected = {"example.com",
+                    "ads.example.net",
+                    "sub.domain.org"}
         self.assertEqual(result, expected)
 
     def test_save_domains(self):
@@ -31,7 +33,9 @@ class TestAdDomains(unittest.TestCase):
             self.assertTrue(output_path.exists())
 
             content = output_path.read_text(encoding="utf-8").splitlines()
-            self.assertEqual(content, ["a.com", "b.com", "z.com"])
+            self.assertEqual(content, ["a.com",
+                                       "b.com",
+                                       "z.com"])
 
     def test_process_adblock_list(self):
         test_input = [
@@ -59,7 +63,8 @@ class TestAdDomains(unittest.TestCase):
     def test_error_handling(self):
         # Проверка несуществующего файла
         with self.assertRaises(RuntimeError):
-            process_adblock_list("non_existent.txt", "output.txt")
+            process_adblock_list("non_existent.txt",
+                                 "output.txt")
 
         # Проверка ошибки записи
         with self.assertRaises(RuntimeError), \
