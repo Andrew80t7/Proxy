@@ -4,7 +4,7 @@ from Server.ProxyServer import (ProxyServer,
                                 is_prime,
                                 is_palindrome,
                                 factorial,
-                                reverse_string)
+                                reverse_string, AD_HOSTS_1, is_ad_host, modify_html)
 
 
 class DummySocket:
@@ -44,6 +44,31 @@ class FakeServer:
     def fileno(self):
         # чтобы select не включал его
         return -1
+
+
+class TestHTMLUtils(unittest.TestCase):
+    def test_modify_html_removal_and_style(self):
+        html = (b"<html><head></head><body>"
+                b"<div class='ad-container'>Ad"
+                b"</div><p>Hello</p></body></html>")
+        cleaned, blocked = modify_html(html)
+        text = cleaned.decode('utf-8')
+        self.assertNotIn('ad-container', text)
+        self.assertIn('<style>', text)
+        # blocked should contain one element
+        self.assertEqual(len(blocked), 1)
+        self.assertEqual(blocked[0]['selector'],
+                         '.ad-container')
+
+
+class TestAdHostUtils(unittest.TestCase):
+    def test_is_ad_host(self):
+        # clear and set
+        AD_HOSTS_1.clear()
+        AD_HOSTS_1.update({'ads.test.com'})
+        self.assertTrue(is_ad_host('ads.test.com'))
+        self.assertTrue(is_ad_host('sub.ads.test.com'))
+        self.assertFalse(is_ad_host('example.com'))
 
 
 class TestProxyServer(unittest.TestCase):

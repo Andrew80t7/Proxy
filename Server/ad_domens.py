@@ -4,7 +4,8 @@ from typing import Set
 
 
 def extract_domains(input_lines: list) -> Set[str]:
-    """Извлекает домены из списка строк по правилам EasyList."""
+    """Извлекает домены из списка
+     строк по правилам EasyList."""
     pattern = re.compile(r"^([^#|/$@:\s]+)")
     domains = set()
 
@@ -20,7 +21,6 @@ def extract_domains(input_lines: list) -> Set[str]:
 
 
 def save_domains(domains: Set[str], output_file: str) -> int:
-    """Сохраняет отсортированный список доменов в файл."""
     try:
         with open(output_file, "w", encoding="utf-8") as f:
             for domain in sorted(domains):
@@ -30,7 +30,8 @@ def save_domains(domains: Set[str], output_file: str) -> int:
         raise RuntimeError(f"Ошибка записи файла: {e}")
 
 
-def process_adblock_list(input_file: str, output_file: str) -> None:
+def process_adblock_list(input_file: str,
+                         output_file: str) -> None:
     """Основная функция обработки файла."""
     try:
         with open(input_file, "r", encoding="utf-8") as f:
@@ -47,4 +48,5 @@ def process_adblock_list(input_file: str, output_file: str) -> None:
 
 
 if __name__ == "__main__":
-    process_adblock_list("../easylist.txt", "ad_hosts.txt")
+    process_adblock_list("../easylist.txt",
+                         "ad_hosts.txt")

@@ -1,7 +1,10 @@
 import unittest
 import warnings
 
-from Server.dump import DUMP_DIR, run_dump_server, sum_numbers, fibonacci, factorial
+from Server.dump import (
+    sum_numbers,
+    fibonacci,
+    factorial)
 
 warnings.filterwarnings("ignore",
                         category=ResourceWarning)
@@ -27,13 +30,19 @@ class TestDumpServer(unittest.TestCase):
 
     def test_fibonacci(self):
         # Тестирование базовых случаев
-        self.assertEqual(fibonacci(0), 0)
-        self.assertEqual(fibonacci(1), 1)
-        self.assertEqual(fibonacci(10), 55)
+        self.assertEqual(fibonacci(0),
+                         0)
+        self.assertEqual(fibonacci(1),
+                         1)
+        self.assertEqual(fibonacci(10),
+                         55)
 
         # Проверка последовательности
         fib_seq = [fibonacci(n) for n in range(10)]
-        self.assertEqual(fib_seq, [0, 1, 1, 2, 3, 5, 8, 13, 21, 34])
+        self.assertEqual(
+            fib_seq,
+            [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+        )
 
         # Проверка исключений
         with self.assertRaises(ValueError):
