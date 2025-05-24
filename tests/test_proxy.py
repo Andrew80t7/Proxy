@@ -1,29 +1,30 @@
 import math
 import os
+import string
 import tempfile
 import unittest
 from Server.ProxyServer import (ProxyServer,
                                 fibonacci,
-                                is_prime,
-                                is_palindrome,
-                                factorial,
-                                reverse_string,
+                                Is_prime,
+                                Is_palindrome,
+                                Factorial,
+                                Reverse_string,
                                 AD_HOSTS_1,
                                 is_ad_host,
                                 modify_html,
-                                time_to_seconds,
+                                Time_to_seconds,
                                 is_prime_v2,
-                                circle_area,
+                                Circle_area,
                                 is_pangram,
-                                count_words,
-                                find_max,
-                                is_leap_year,
-                                km_to_miles,
+                                Count_words,
+                                Find_max,
+                                Is_leap_year,
+                                Km_to_miles,
                                 sum_list,
-                                is_even,
-                                is_arithmetic_sequence,
+                                Is_even,
+                                Is_arithmetic_sequence,
                                 calculate_kinetic_energy,
-                                caesar_cipher,
+                                Caesar_cipher,
                                 calculate_variance,
                                 sum_digits,
                                 kg_to_pounds,
@@ -31,15 +32,15 @@ from Server.ProxyServer import (ProxyServer,
                                 is_weekend,
                                 rot13,
                                 count_consonants,
-                                lcm, square, count_lines,
+                                Lcm, square, count_lines,
                                 is_perfect_square,
                                 filter_even,
                                 generate_primes,
                                 recursive_factorial,
-                                binary_to_decimal,
+                                Binary_to_decimal,
                                 decimal_to_binary,
                                 cube, is_positive,
-                                celsius_to_kelvin,
+                                Celsius_to_kelvin,
                                 remove_whitespace,
 
                                 get_century,
@@ -47,7 +48,25 @@ from Server.ProxyServer import (ProxyServer,
                                 circle_circumference,
                                 minutes_to_hours,
                                 flatten_list,
-                                remove_duplicates)
+                                remove_duplicates,
+                                find_min,
+                                is_valid_isbn10,
+                                time_to_seconds,
+                                count_vowels,
+                                caesar_cipher,
+                                is_leap_year,
+                                calculate_average,
+                                circle_area,
+                                km_to_miles,
+                                reverse_string,
+                                is_prime,
+                                gcd,
+                                generate_password,
+                                is_palindrome,
+                                celsius_to_fahrenheit,
+                                find_max,
+                                factorial,
+                                is_even, lcm)
 
 
 class DummySocket:
@@ -123,29 +142,29 @@ class TestProxyServer(unittest.TestCase):
 
     def test_factorial_positive(self):
         self.assertEqual(
-            factorial(0), 1)
+            Factorial(0), 1)
         self.assertEqual(
-            factorial(5), 120)
+            Factorial(5), 120)
 
     def test_factorial_negative(self):
         with self.assertRaises(ValueError):
-            factorial(-3)
+            Factorial(-3)
 
     def test_is_palindrome(self):
         self.assertTrue(
-            is_palindrome("A man, a plan, "
+            Is_palindrome("A man, a plan, "
                           "a canal: Panama"))
         self.assertFalse(
-            is_palindrome("Hello"))
+            Is_palindrome("Hello"))
         self.assertTrue(
-            is_palindrome(""))
+            Is_palindrome(""))
 
     def test_is_prime(self):
-        self.assertFalse(is_prime(0))
-        self.assertFalse(is_prime(1))
-        self.assertTrue(is_prime(2))
-        self.assertTrue(is_prime(13))
-        self.assertFalse(is_prime(15))
+        self.assertFalse(Is_prime(0))
+        self.assertFalse(Is_prime(1))
+        self.assertTrue(Is_prime(2))
+        self.assertTrue(Is_prime(13))
+        self.assertFalse(Is_prime(15))
 
     def test_fibonacci_valid(self):
         self.assertEqual(
@@ -160,9 +179,9 @@ class TestProxyServer(unittest.TestCase):
             fibonacci(-1)
 
     def test_reverse_string(self):
-        self.assertEqual(reverse_string("abc"),
+        self.assertEqual(Reverse_string("abc"),
                          "cba")
-        self.assertEqual(reverse_string(""),
+        self.assertEqual(Reverse_string(""),
                          "")
 
     def setUp(self):
@@ -201,10 +220,10 @@ class TestProxyServer(unittest.TestCase):
 class TestNewFunctions(unittest.TestCase):
 
     def test_is_even(self):
-        self.assertTrue(is_even(0))
-        self.assertTrue(is_even(-4))
-        self.assertFalse(is_even(3))
-        self.assertFalse(is_even(9999999))
+        self.assertTrue(Is_even(0))
+        self.assertTrue(Is_even(-4))
+        self.assertFalse(Is_even(3))
+        self.assertFalse(Is_even(9999999))
 
     def test_sum_list(self):
         self.assertEqual(sum_list([1, 2, 3]), 6)
@@ -213,32 +232,32 @@ class TestNewFunctions(unittest.TestCase):
         self.assertEqual(sum_list([-10, 5]), -5)
 
     def test_km_to_miles(self):
-        self.assertAlmostEqual(km_to_miles(1),
+        self.assertAlmostEqual(Km_to_miles(1),
                                0.621371)
-        self.assertAlmostEqual(km_to_miles(0),
+        self.assertAlmostEqual(Km_to_miles(0),
                                0.0)
-        self.assertAlmostEqual(km_to_miles(100),
+        self.assertAlmostEqual(Km_to_miles(100),
                                62.1371)
 
     def test_is_leap_year(self):
-        self.assertTrue(is_leap_year(2000))
-        self.assertTrue(is_leap_year(2020))
-        self.assertFalse(is_leap_year(1900))
-        self.assertFalse(is_leap_year(2021))
-        self.assertTrue(is_leap_year(2012))
+        self.assertTrue(Is_leap_year(2000))
+        self.assertTrue(Is_leap_year(2020))
+        self.assertFalse(Is_leap_year(1900))
+        self.assertFalse(Is_leap_year(2021))
+        self.assertTrue(Is_leap_year(2012))
 
     def test_find_max(self):
-        self.assertEqual(find_max([3, 1, 4, 2]), 4)
-        self.assertEqual(find_max([-5, -1, -10]), -1)
-        self.assertIsNone(find_max([]))
-        self.assertEqual(find_max([5.5, 3.3]), 5.5)
+        self.assertEqual(Find_max([3, 1, 4, 2]), 4)
+        self.assertEqual(Find_max([-5, -1, -10]), -1)
+        self.assertIsNone(Find_max([]))
+        self.assertEqual(Find_max([5.5, 3.3]), 5.5)
 
     def test_count_words(self):
-        self.assertEqual(count_words("Hello world"), 2)
-        self.assertEqual(count_words(""), 0)
-        self.assertEqual(count_words("   Multiple   spaces   "),
+        self.assertEqual(Count_words("Hello world"), 2)
+        self.assertEqual(Count_words(""), 0)
+        self.assertEqual(Count_words("   Multiple   spaces   "),
                          2)
-        self.assertEqual(count_words("No-spaces-here"), 1)
+        self.assertEqual(Count_words("No-spaces-here"), 1)
 
     def test_is_pangram(self):
         self.assertTrue(is_pangram("The quick brown"
@@ -249,26 +268,26 @@ class TestNewFunctions(unittest.TestCase):
         self.assertFalse(is_pangram(""))
 
     def test_circle_area(self):
-        self.assertAlmostEqual(circle_area(1),
+        self.assertAlmostEqual(Circle_area(1),
                                3.14159,
                                places=4)
-        self.assertAlmostEqual(circle_area(2.5),
+        self.assertAlmostEqual(Circle_area(2.5),
                                19.6349375,
                                places=4)
         with self.assertRaises(ValueError):
-            circle_area(-5)
+            Circle_area(-5)
 
     def test_time_to_seconds(self):
-        self.assertEqual(time_to_seconds(1, 30),
+        self.assertEqual(Time_to_seconds(1, 30),
                          5400)
-        self.assertEqual(time_to_seconds(0, 45),
+        self.assertEqual(Time_to_seconds(0, 45),
                          2700)
-        self.assertEqual(time_to_seconds(2, 0),
+        self.assertEqual(Time_to_seconds(2, 0),
                          7200)
         with self.assertRaises(ValueError):
-            time_to_seconds(-1, 10)
+            Time_to_seconds(-1, 10)
         with self.assertRaises(ValueError):
-            time_to_seconds(2, -5)
+            Time_to_seconds(2, -5)
 
     def test_is_prime_v2(self):
         self.assertTrue(is_prime_v2(2))
@@ -289,11 +308,11 @@ class TestFunctions(unittest.TestCase):
                                6.25)
 
     def test_lcm(self):
-        self.assertEqual(lcm(12, 18),
+        self.assertEqual(Lcm(12, 18),
                          36)
-        self.assertEqual(lcm(0, 5),
+        self.assertEqual(Lcm(0, 5),
                          0)
-        self.assertEqual(lcm(7, 3),
+        self.assertEqual(Lcm(7, 3),
                          21)
 
     # Строковые операции
@@ -342,8 +361,8 @@ class TestFunctions(unittest.TestCase):
 
     # Шифрование
     def test_caesar_cipher(self):
-        self.assertEqual(caesar_cipher("XYZ", 3), "ABC")
-        self.assertEqual(caesar_cipher("abc", -1), "zab")
+        self.assertEqual(Caesar_cipher("XYZ", 3), "ABC")
+        self.assertEqual(Caesar_cipher("abc", -1), "zab")
 
     # Физические расчеты
     def test_kinetic_energy(self):
@@ -356,8 +375,8 @@ class TestFunctions(unittest.TestCase):
 
     # Проверка последовательностей
     def test_is_arithmetic_sequence(self):
-        self.assertTrue(is_arithmetic_sequence([2, 4, 6, 8]))
-        self.assertFalse(is_arithmetic_sequence([1, 3, 7]))
+        self.assertTrue(Is_arithmetic_sequence([2, 4, 6, 8]))
+        self.assertFalse(Is_arithmetic_sequence([1, 3, 7]))
 
 
 class TestAllFunctions(unittest.TestCase):
@@ -379,17 +398,17 @@ class TestAllFunctions(unittest.TestCase):
         self.assertFalse(is_positive(0))
 
     def test_celsius_to_kelvin(self):
-        self.assertAlmostEqual(celsius_to_kelvin(0),
+        self.assertAlmostEqual(Celsius_to_kelvin(0),
                                273.15)
-        self.assertAlmostEqual(celsius_to_kelvin(100),
+        self.assertAlmostEqual(Celsius_to_kelvin(100),
                                373.15)
-        self.assertAlmostEqual(celsius_to_kelvin(-273.15),
+        self.assertAlmostEqual(Celsius_to_kelvin(-273.15),
                                0)
 
     def test_lcm(self):
-        self.assertEqual(lcm(12, 18), 36)
-        self.assertEqual(lcm(0, 5), 0)
-        self.assertEqual(lcm(7, 3), 21)
+        self.assertEqual(Lcm(12, 18), 36)
+        self.assertEqual(Lcm(0, 5), 0)
+        self.assertEqual(Lcm(7, 3), 21)
 
     # Строковые операции
     def test_count_consonants(self):
@@ -461,8 +480,8 @@ class TestAllFunctions(unittest.TestCase):
         self.assertEqual(decimal_to_binary(0), "0")
 
     def test_binary_to_decimal(self):
-        self.assertEqual(binary_to_decimal("101"), 5)
-        self.assertEqual(binary_to_decimal("0"), 0)
+        self.assertEqual(Binary_to_decimal("101"), 5)
+        self.assertEqual(Binary_to_decimal("0"), 0)
 
     # Рекурсивные функции
     def test_sum_digits(self):
@@ -508,9 +527,9 @@ class TestAllFunctions(unittest.TestCase):
 
     # Шифрование
     def test_caesar_cipher(self):
-        self.assertEqual(caesar_cipher("XYZ", 3), "ABC")
-        self.assertEqual(caesar_cipher("abc", -1), "zab")
-        self.assertEqual(caesar_cipher("Hello!", 13), "Uryyb!")
+        self.assertEqual(Caesar_cipher("XYZ", 3), "ABC")
+        self.assertEqual(Caesar_cipher("abc", -1), "zab")
+        self.assertEqual(Caesar_cipher("Hello!", 13), "Uryyb!")
 
     # Физические расчеты
     def test_calculate_kinetic_energy(self):
@@ -523,10 +542,10 @@ class TestAllFunctions(unittest.TestCase):
 
     # Проверка последовательностей
     def test_is_arithmetic_sequence(self):
-        self.assertTrue(is_arithmetic_sequence([2, 4, 6, 8]))
-        self.assertFalse(is_arithmetic_sequence([1, 3, 7]))
-        self.assertTrue(is_arithmetic_sequence([]))
-        self.assertTrue(is_arithmetic_sequence([5]))
+        self.assertTrue(Is_arithmetic_sequence([2, 4, 6, 8]))
+        self.assertFalse(Is_arithmetic_sequence([1, 3, 7]))
+        self.assertTrue(Is_arithmetic_sequence([]))
+        self.assertTrue(Is_arithmetic_sequence([5]))
 
     # Работа с файлами
     def test_count_lines(self):
@@ -535,6 +554,116 @@ class TestAllFunctions(unittest.TestCase):
             f.close()
             self.assertEqual(count_lines(f.name), 3)
             os.unlink(f.name)
+
+
+class Test_do_AllFunctions(unittest.TestCase):
+
+    # 1. Проверка четности числа
+    def test_is_even(self):
+        self.assertTrue(is_even(4))
+        self.assertFalse(is_even(5))
+        self.assertTrue(is_even(0))
+
+    # 2. Расчет факториала
+    def test_factorial(self):
+        self.assertEqual(factorial(5), 120)
+        self.assertEqual(factorial(0), 1)
+        with self.assertRaises(ValueError):
+            factorial(-1)
+
+    # 3. Поиск максимального числа
+    def test_find_max(self):
+        self.assertEqual(find_max([3, 1, 4, 2]), 4)
+        self.assertIsNone(find_max([]))
+        self.assertEqual(find_max([-5, -1, -10]), -1)
+
+    # 4. Конвертация Celsius в Fahrenheit
+    def test_celsius_to_fahrenheit(self):
+        self.assertAlmostEqual(celsius_to_fahrenheit(0), 32.0)
+        self.assertAlmostEqual(celsius_to_fahrenheit(100), 212.0)
+
+    # 5. Проверка палиндрома
+    def test_is_palindrome(self):
+        self.assertTrue(is_palindrome("A man, a plan, a canal: Panama"))
+        self.assertFalse(is_palindrome("Hello World"))
+
+    # 6. Генерация случайного пароля
+    def test_generate_password(self):
+        password = generate_password(12)
+        self.assertEqual(len(password), 12)
+        self.assertTrue(any(c in string.ascii_letters for c in password))
+
+    # 7. Расчет НОД
+    def test_gcd(self):
+        self.assertEqual(gcd(54, 24), 6)
+        self.assertEqual(gcd(0, 5), 5)
+
+    # 8. Проверка простого числа
+    def test_is_prime(self):
+        self.assertTrue(is_prime(7919))
+        self.assertFalse(is_prime(1))
+        self.assertFalse(is_prime(4))
+
+    # 9. Реверс строки
+    def test_reverse_string(self):
+        self.assertEqual(reverse_string("hello"), "olleh")
+        self.assertEqual(reverse_string(""), "")
+
+    # 10. Конвертация километров в мили
+    def test_km_to_miles(self):
+        self.assertAlmostEqual(km_to_miles(1), 0.621371)
+        self.assertAlmostEqual(km_to_miles(0), 0.0)
+
+    # 11. Расчет площади круга
+    def test_circle_area(self):
+        self.assertAlmostEqual(circle_area(2), math.pi * 4)
+        with self.assertRaises(ValueError):
+            circle_area(-1)
+
+    # 12. Поиск среднего значения
+    def test_calculate_average(self):
+        self.assertEqual(calculate_average([1, 2, 3, 4, 5]),
+                         3.0)
+        with self.assertRaises(ValueError):
+            calculate_average([])
+
+    # 13. Проверка високосного года
+    def test_is_leap_year(self):
+        self.assertTrue(is_leap_year(2000))
+        self.assertFalse(is_leap_year(1900))
+        self.assertTrue(is_leap_year(2020))
+
+    # 14. Шифр Цезаря
+    def test_caesar_cipher(self):
+        self.assertEqual(caesar_cipher("XYZ", 3),
+                         "ABC")
+        self.assertEqual(caesar_cipher("abc", -1),
+                         "zab")
+
+    # 15. Подсчет гласных
+    def test_count_vowels(self):
+        self.assertEqual(count_vowels("Hello World"), 3)
+        self.assertEqual(count_vowels("Привет"), 2)
+
+    # 16. Конвертация времени в секунды
+    def test_time_to_seconds(self):
+        self.assertEqual(time_to_seconds(1, 30, 15), 5415)
+        self.assertEqual(time_to_seconds(0, 0, 0), 0)
+
+    # 17. Проверка ISBN-10
+    def test_is_valid_isbn10(self):
+        self.assertTrue(is_valid_isbn10("0-306-40615-2"))
+        self.assertFalse(is_valid_isbn10("1234567890"))
+
+    # 18. Поиск минимального числа
+    def test_find_min(self):
+        self.assertEqual(find_min([3, 1, 4, 2]), 1)
+        self.assertIsNone(find_min([]))
+
+    # 19. Расчет НОК
+    def test_lcm(self):
+        self.assertEqual(lcm(12, 18), 36)
+        self.assertEqual(lcm(0, 5), 0)
 
 
 if __name__ == "__main__":
